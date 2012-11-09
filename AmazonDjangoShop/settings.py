@@ -2,7 +2,7 @@
 from os import path
 PROJECT_PATH = path.abspath(path.dirname(__file__))
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -122,8 +122,8 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
-    'shop',
     'south',
+    'shop',
 )
 
 # A sample logging configuration. The only tangible logging
