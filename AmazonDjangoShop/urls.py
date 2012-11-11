@@ -6,7 +6,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'AmazonDjangoShop.views.home', name='home'),
+    url(r'^$', 'shop.views.home', name='home'),
     # url(r'^AmazonDjangoShop/', include('AmazonDjangoShop.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:

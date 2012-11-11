@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>My awesome shop</title>
+</head>
+
+<body>
+
+<div class="container">
+<h1>My awesome shop products:</h1>
+{% for product in products %}
+  <div class="product">
+    <h2>{{ product.category }}</h2>
+    <h3>{{ product.title }}</h3>
+    <ul>
+      <li>ASIN: {{ product.asin }}</li>
+      <li>Description: {{ product.description }}</li>
+      <li>Price: {{ product.price }}</li>
+      <li>Popularity: {{ product.popularity }}</li>
+    </ul>
+  </div>
+  <hr>
+{% endfor %}
+</div>
+
+</body>
+
+</html>
