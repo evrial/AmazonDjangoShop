@@ -17,12 +17,11 @@
 <h1>My awesome shop products:</h1>
 {% for product in products %}
   <div class="product">
-    <h2>{{ product.category }}</h2>
-    <h2>{{ product.category.slug }}</h2>
-    <h3>{{ product.title }}</h3>
+    <h2><a href="{{ product.category.slug }}/">{{ product.category }}</a></h2>
+    <h3><a href="{{ product.category.slug }}/{{ product.asin }}/">{{ product.title }}</a></h3>
     <ul>
       <li>ASIN: {{ product.asin }}</li>
-      <li>Description: {{ product.description }}</li>
+      <li>Description: {{ product.description|linebreaks }}</li>
       <li>Price: {{ product.price }}</li>
       <li>Popularity: {{ product.popularity }}</li>
     </ul>

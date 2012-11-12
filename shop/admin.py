@@ -5,7 +5,7 @@ from models import Category, Product, StaticPage
 class CategoryAdmin(admin.ModelAdmin):
     date_hierarchy = 'created'
     prepopulated_fields = {'slug': ('title',)}
-    list_display = ('visible', 'title', 'amazon_node_id', 'created', 'modified')
+    list_display = ('title', 'amazon_node_id', 'created', 'modified', 'visible')
     list_display_links = ('title',)
     list_editable = ('visible',)
     list_filter = ('title', 'created', 'modified')
@@ -18,7 +18,7 @@ class ProductAdmin(admin.ModelAdmin):
     search_fields = ['title', 'description', 'asin']
 
 class StaticAdmin(admin.ModelAdmin):
-    list_display = ('visible', 'title', 'slug')
+    list_display = ('title', 'slug', 'visible')
     list_display_links = ('title',)
     list_editable = ('visible',)
     prepopulated_fields = {'slug': ('title',)}

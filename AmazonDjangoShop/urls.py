@@ -9,5 +9,5 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 
     url(r'^$', 'shop.views.home', name='home'),
-	url(r'^(?P<slug>[-\w]+)/$', 'shop.views.static'),
+    url(r'^(?P<slug>[-\w]+)/$', 'shop.views.static'),
 )

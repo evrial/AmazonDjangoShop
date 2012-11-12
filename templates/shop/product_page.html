@@ -15,7 +15,7 @@
     <h3>{{ product.title }}</h3>
     <ul>
       <li>ASIN: {{ product.asin }}</li>
-      <li>Description: {{ product.description }}</li>
+      <li>Description: {{ product.description|linebreaks }}</li>
       <li>Price: {{ product.price }}</li>
       <li>Popularity: {{ product.popularity }}</li>
     </ul>
