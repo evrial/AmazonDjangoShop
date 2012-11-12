@@ -9,10 +9,16 @@
 <body>
 
 <div class="container">
+<ul>{% for category in categories %}
+  <li><a href="{{ category.slug }}/">{{ category.title }}</a><li>
+{% endfor %}</ul>
+
+
 <h1>My awesome shop products:</h1>
 {% for product in products %}
   <div class="product">
     <h2>{{ product.category }}</h2>
+    <h2>{{ product.category.slug }}</h2>
     <h3>{{ product.title }}</h3>
     <ul>
       <li>ASIN: {{ product.asin }}</li>

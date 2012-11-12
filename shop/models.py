@@ -2,25 +2,31 @@ import datetime
 
 from django.db import models
 
+slug_help_text = "A slug is a short label for representing a page in URL. \
+Containing only letters, numbers, underscores or hyphens."
+
+# todo: abstract class (title, visible, created, modified)
 class Category(models.Model):
     """
     Here later I will add some unit testing
     """
-    amazon_node_id = models.IntegerField(help_text="For help refer to <a target='_blank' href='https://affiliate-program.amazon.com/gp/associates/help/t41/a6'>this page</a>.")
+    amazon_node_id = models.IntegerField(
+        help_text="For help refer to <a target='_blank' href='https://affiliate-program.amazon.com/gp/associates/help/t41/a6'>this page</a>.")
     title = models.CharField(max_length=255)
-    slug = models.SlugField(max_length=50, help_text="A slug is a short label for representing a category in URL. Containing only letters, numbers, underscores or hyphens.")
+    slug = models.SlugField(max_length=50, help_text=slug_help_text)
     description = models.TextField(blank=True)
     created = models.DateTimeField(auto_now_add=True,
         default=datetime.datetime.now())
     modified = models.DateTimeField(auto_now=True)
-    active = models.BooleanField(default=True, help_text="Is it visible to the world or not.")
+    visible = models.BooleanField(default=True)
 
     def __unicode__(self):
         return self.title
 
 class Product(models.Model):
     category = models.ForeignKey(Category)
-    asin = models.CharField(max_length=10, help_text="For info about ASIN please refer to <a target='_blank' href='http://en.wikipedia.org/wiki/ASIN'>this page</a>.")
+    asin = models.CharField(max_length=10,
+        help_text="For info about ASIN please refer to <a target='_blank' href='http://en.wikipedia.org/wiki/ASIN'>this page</a>.")
     title = models.CharField(max_length=255)
     description = models.TextField(blank=True)
     price = models.IntegerField()
@@ -29,11 +35,11 @@ class Product(models.Model):
     def __unicode__(self):
         return self.title
 
-class AdditionalPage(models.Model):
+class StaticPage(models.Model):
     title = models.CharField(max_length=255)
-    slug = models.SlugField(max_length=50)
+    slug = models.SlugField(max_length=50, help_text=slug_help_text)
     text = models.TextField()
-    active = models.BooleanField(default=True)
+    visible = models.BooleanField(default=True)
 
     def __unicode__(self):
         return self.title
