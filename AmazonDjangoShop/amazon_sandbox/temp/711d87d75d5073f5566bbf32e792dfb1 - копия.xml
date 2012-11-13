@@ -1,0 +1,148 @@
+<BrowseNodeLookupResponse xmlns="http://webservices.amazon.com/AWSECommerceService/2011-08-01">
+  <OperationRequest>
+    <HTTPHeaders>
+      <Header Name="UserAgent" Value="python-amazon-product-api/0.2.5 +http://pypi.python.org/pypi/python-amazon-product-api/"/>
+    </HTTPHeaders>
+    <RequestId>fa8bdd97-bf4f-4a7d-b127-4d1f0fc67e2d</RequestId>
+    <Arguments>
+      <Argument Name="Operation" Value="BrowseNodeLookup"/>
+      <Argument Name="Service" Value="AWSECommerceService"/>
+      <Argument Name="Signature" Value="COdDPkKhrO8kn3KwAqhGql60bk7yXnDBxa1DpYLo68M="/>
+      <Argument Name="AssociateTag" Value="onlinshop0b-20"/>
+      <Argument Name="Version" Value="2010-12-01"/>
+      <Argument Name="BrowseNodeId" Value="283155"/>
+      <Argument Name="AWSAccessKeyId" Value="AKIAJXBYRCZ7AKW6USBA"/>
+      <Argument Name="Timestamp" Value="2012-11-12T23:02:04Z"/>
+      <Argument Name="ResponseGroup" Value="TopSellers"/>
+    </Arguments>
+    <RequestProcessingTime>0.084717</RequestProcessingTime>
+  </OperationRequest>
+  <BrowseNodes>
+    <Request>
+      <IsValid>True</IsValid>
+      <BrowseNodeLookupRequest>
+        <BrowseNodeId>283155</BrowseNodeId>
+        <ResponseGroup>TopSellers</ResponseGroup>
+      </BrowseNodeLookupRequest>
+    </Request>
+    <BrowseNode>
+      <BrowseNodeId>283155</BrowseNodeId>
+      <Name>Books</Name>
+      <TopSellers>
+        <TopSeller>
+          <ASIN>B007SGLZP8</ASIN>
+          <Title>The Racketeer</Title>
+        </TopSeller>
+        <TopSeller>
+          <ASIN>B008EXO3WQ</ASIN>
+          <Title>The Perfect Hope: Book Three of the Inn BoonsBoro Trilogy</Title>
+        </TopSeller>
+        <TopSeller>
+          <ASIN>B009LBO334</ASIN>
+          <Title>The Secret of Ella and Micha</Title>
+        </TopSeller>
+        <TopSeller>
+          <ASIN>B009I3UOKQ</ASIN>
+          <Title>The Unwanted Wife</Title>
+        </TopSeller>
+        <TopSeller>
+          <ASIN>1419705849</ASIN>
+          <Title>The Third Wheel (Diary of a Wimpy Kid, Book 7)</Title>
+        </TopSeller>
+        <TopSeller>
+          <ASIN>B00A45PY8E</ASIN>
+          <Title>All In (The Blackstone Affair, Part 2)</Title>
+        </TopSeller>
+        <TopSeller>
+          <ASIN>B006LSZECO</ASIN>
+          <Title>Gone Girl: A Novel</Title>
+        </TopSeller>
+        <TopSeller>
+          <ASIN>B008Z436F4</ASIN>
+          <Title>Leave Me Breathless</Title>
+        </TopSeller>
+        <TopSeller>
+          <ASIN>B007BGQBFY</ASIN>
+          <Title>Merry Christmas, Alex Cross</Title>
+        </TopSeller>
+        <TopSeller>
+          <ASIN>B0089LQJ3E</ASIN>
+          <Title>Apocalypse Z: The Beginning of the End</Title>
+        </TopSeller>
+      </TopSellers>
+      <TopItemSet>
+        <Type>TopSellers</Type>
+        <TopItem>
+          <ASIN>B007SGLZP8</ASIN>
+          <Title>The Racketeer</Title>
+          <DetailPageURL>http://www.amazon.com/The-Racketeer-ebook/dp/B007SGLZP8%3FSubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB007SGLZP8</DetailPageURL>
+          <ProductGroup>eBooks</ProductGroup>
+          <Author>Grisham, John</Author>
+        </TopItem>
+        <TopItem>
+          <ASIN>B008EXO3WQ</ASIN>
+          <Title>The Perfect Hope: Book Three of the Inn BoonsBoro Trilogy</Title>
+          <DetailPageURL>http://www.amazon.com/Perfect-Hope-BoonsBoro-Trilogy-ebook/dp/B008EXO3WQ%3FSubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB008EXO3WQ</DetailPageURL>
+          <ProductGroup>eBooks</ProductGroup>
+          <Author>Roberts, Nora</Author>
+        </TopItem>
+        <TopItem>
+          <ASIN>B009LBO334</ASIN>
+          <Title>The Secret of Ella and Micha</Title>
+          <DetailPageURL>http://www.amazon.com/Secret-Ella-Micha-ebook/dp/B009LBO334%3FSubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB009LBO334</DetailPageURL>
+          <ProductGroup>eBooks</ProductGroup>
+          <Author>Sorensen, Jessica</Author>
+        </TopItem>
+        <TopItem>
+          <ASIN>B009I3UOKQ</ASIN>
+          <Title>The Unwanted Wife</Title>
+          <DetailPageURL>http://www.amazon.com/The-Unwanted-Wife-ebook/dp/B009I3UOKQ%3FSubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB009I3UOKQ</DetailPageURL>
+          <ProductGroup>eBooks</ProductGroup>
+          <Author>Anders, Natasha</Author>
+        </TopItem>
+        <TopItem>
+          <ASIN>1419705849</ASIN>
+          <Title>The Third Wheel (Diary of a Wimpy Kid, Book 7)</Title>
+          <DetailPageURL>http://www.amazon.com/Third-Wheel-Diary-Wimpy-Book/dp/1419705849%3FSubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1419705849</DetailPageURL>
+          <ProductGroup>Book</ProductGroup>
+          <Author>Kinney, Jeff</Author>
+        </TopItem>
+        <TopItem>
+          <ASIN>B00A45PY8E</ASIN>
+          <Title>All In (The Blackstone Affair, Part 2)</Title>
+          <DetailPageURL>http://www.amazon.com/All-Blackstone-Affair-Part-ebook/dp/B00A45PY8E%3FSubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00A45PY8E</DetailPageURL>
+          <ProductGroup>eBooks</ProductGroup>
+          <Author>Miller, Raine</Author>
+        </TopItem>
+        <TopItem>
+          <ASIN>B006LSZECO</ASIN>
+          <Title>Gone Girl: A Novel</Title>
+          <DetailPageURL>http://www.amazon.com/Gone-Girl-A-Novel-ebook/dp/B006LSZECO%3FSubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB006LSZECO</DetailPageURL>
+          <ProductGroup>eBooks</ProductGroup>
+          <Author>Flynn, Gillian</Author>
+        </TopItem>
+        <TopItem>
+          <ASIN>B008Z436F4</ASIN>
+          <Title>Leave Me Breathless</Title>
+          <DetailPageURL>http://www.amazon.com/Leave-Me-Breathless-ebook/dp/B008Z436F4%3FSubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB008Z436F4</DetailPageURL>
+          <ProductGroup>eBooks</ProductGroup>
+          <Author>Lynn, Cherrie</Author>
+        </TopItem>
+        <TopItem>
+          <ASIN>B007BGQBFY</ASIN>
+          <Title>Merry Christmas, Alex Cross</Title>
+          <DetailPageURL>http://www.amazon.com/Merry-Christmas-Alex-Cross-ebook/dp/B007BGQBFY%3FSubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB007BGQBFY</DetailPageURL>
+          <ProductGroup>eBooks</ProductGroup>
+          <Author>Patterson, James</Author>
+        </TopItem>
+        <TopItem>
+          <ASIN>B0089LQJ3E</ASIN>
+          <Title>Apocalypse Z: The Beginning of the End</Title>
+          <DetailPageURL>http://www.amazon.com/Apocalypse-Z-Beginning-End-ebook/dp/B0089LQJ3E%3FSubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB0089LQJ3E</DetailPageURL>
+          <ProductGroup>eBooks</ProductGroup>
+          <Author>Loureiro, Manel</Author>
+        </TopItem>
+      </TopItemSet>
+    </BrowseNode>
+  </BrowseNodes>
+</BrowseNodeLookupResponse>
