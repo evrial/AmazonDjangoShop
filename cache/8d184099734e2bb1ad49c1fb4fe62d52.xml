@@ -1,0 +1,156 @@
+<ItemLookupResponse xmlns="http://webservices.amazon.com/AWSECommerceService/2011-08-01">
+  <OperationRequest>
+    <HTTPHeaders>
+      <Header Name="UserAgent" Value="python-amazon-product-api/0.2.5 +http://pypi.python.org/pypi/python-amazon-product-api/"/>
+    </HTTPHeaders>
+    <RequestId>a6eaa3c3-e1c2-41fc-bad0-e1610506bd42</RequestId>
+    <Arguments>
+      <Argument Name="Operation" Value="ItemLookup"/>
+      <Argument Name="Service" Value="AWSECommerceService"/>
+      <Argument Name="Signature" Value="4y72EvPcncdRje284Yg6hf2sNmFAyR6JnveFERqU6DE="/>
+      <Argument Name="AssociateTag" Value="onlinshop0b-20"/>
+      <Argument Name="Version" Value="2010-12-01"/>
+      <Argument Name="ItemId" Value="B009LBO334"/>
+      <Argument Name="AWSAccessKeyId" Value="AKIAJXBYRCZ7AKW6USBA"/>
+      <Argument Name="Timestamp" Value="2012-11-14T21:14:56Z"/>
+      <Argument Name="ResponseGroup" Value="                EditorialReview,Images,ItemAttributes,ItemIds,OfferFull,Offers,Reviews,SalesRank"/>
+    </Arguments>
+    <RequestProcessingTime>0.0196910000000000</RequestProcessingTime>
+  </OperationRequest>
+  <Items>
+    <Request>
+      <IsValid>True</IsValid>
+      <ItemLookupRequest>
+        <IdType>ASIN</IdType>
+        <ItemId>B009LBO334</ItemId>
+        <ResponseGroup>EditorialReview</ResponseGroup>
+        <ResponseGroup>Images</ResponseGroup>
+        <ResponseGroup>ItemAttributes</ResponseGroup>
+        <ResponseGroup>ItemIds</ResponseGroup>
+        <ResponseGroup>OfferFull</ResponseGroup>
+        <ResponseGroup>Offers</ResponseGroup>
+        <ResponseGroup>Reviews</ResponseGroup>
+        <ResponseGroup>SalesRank</ResponseGroup>
+        <VariationPage>All</VariationPage>
+      </ItemLookupRequest>
+    </Request>
+    <Item>
+      <ASIN>B009LBO334</ASIN>
+      <DetailPageURL>http://www.amazon.com/The-Secret-Ella-Micha-ebook/dp/B009LBO334%3FSubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB009LBO334</DetailPageURL>
+      <ItemLinks>
+        <ItemLink>
+          <Description>Technical Details</Description>
+          <URL>http://www.amazon.com/The-Secret-Ella-Micha-ebook/dp/tech-data/B009LBO334%3FSubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB009LBO334</URL>
+        </ItemLink>
+        <ItemLink>
+          <Description>Add To Baby Registry</Description>
+          <URL>http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3DB009LBO334%26SubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB009LBO334</URL>
+        </ItemLink>
+        <ItemLink>
+          <Description>Add To Wedding Registry</Description>
+          <URL>http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3DB009LBO334%26SubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB009LBO334</URL>
+        </ItemLink>
+        <ItemLink>
+          <Description>Add To Wishlist</Description>
+          <URL>http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3DB009LBO334%26SubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB009LBO334</URL>
+        </ItemLink>
+        <ItemLink>
+          <Description>Tell A Friend</Description>
+          <URL>http://www.amazon.com/gp/pdp/taf/B009LBO334%3FSubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB009LBO334</URL>
+        </ItemLink>
+        <ItemLink>
+          <Description>All Customer Reviews</Description>
+          <URL>http://www.amazon.com/review/product/B009LBO334%3FSubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB009LBO334</URL>
+        </ItemLink>
+        <ItemLink>
+          <Description>All Offers</Description>
+          <URL>http://www.amazon.com/gp/offer-listing/B009LBO334%3FSubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB009LBO334</URL>
+        </ItemLink>
+      </ItemLinks>
+      <SalesRank>5</SalesRank>
+      <SmallImage>
+        <URL>http://ecx.images-amazon.com/images/I/51jQsD9wQ2L._SL75_.jpg</URL>
+        <Height Units="pixels">75</Height>
+        <Width Units="pixels">50</Width>
+      </SmallImage>
+      <MediumImage>
+        <URL>http://ecx.images-amazon.com/images/I/51jQsD9wQ2L._SL160_.jpg</URL>
+        <Height Units="pixels">160</Height>
+        <Width Units="pixels">107</Width>
+      </MediumImage>
+      <LargeImage>
+        <URL>http://ecx.images-amazon.com/images/I/51jQsD9wQ2L.jpg</URL>
+        <Height Units="pixels">500</Height>
+        <Width Units="pixels">333</Width>
+      </LargeImage>
+      <ImageSets>
+        <ImageSet Category="primary">
+          <SwatchImage>
+            <URL>http://ecx.images-amazon.com/images/I/51jQsD9wQ2L._SL30_.jpg</URL>
+            <Height Units="pixels">30</Height>
+            <Width Units="pixels">20</Width>
+          </SwatchImage>
+          <SmallImage>
+            <URL>http://ecx.images-amazon.com/images/I/51jQsD9wQ2L._SL75_.jpg</URL>
+            <Height Units="pixels">75</Height>
+            <Width Units="pixels">50</Width>
+          </SmallImage>
+          <ThumbnailImage>
+            <URL>http://ecx.images-amazon.com/images/I/51jQsD9wQ2L._SL75_.jpg</URL>
+            <Height Units="pixels">75</Height>
+            <Width Units="pixels">50</Width>
+          </ThumbnailImage>
+          <TinyImage>
+            <URL>http://ecx.images-amazon.com/images/I/51jQsD9wQ2L._SL110_.jpg</URL>
+            <Height Units="pixels">110</Height>
+            <Width Units="pixels">73</Width>
+          </TinyImage>
+          <MediumImage>
+            <URL>http://ecx.images-amazon.com/images/I/51jQsD9wQ2L._SL160_.jpg</URL>
+            <Height Units="pixels">160</Height>
+            <Width Units="pixels">107</Width>
+          </MediumImage>
+          <LargeImage>
+            <URL>http://ecx.images-amazon.com/images/I/51jQsD9wQ2L.jpg</URL>
+            <Height Units="pixels">500</Height>
+            <Width Units="pixels">333</Width>
+          </LargeImage>
+        </ImageSet>
+      </ImageSets>
+      <ItemAttributes>
+        <Author>Jessica Sorensen</Author>
+        <Binding>Kindle Edition</Binding>
+        <Format>Kindle eBook</Format>
+        <IsAdultProduct>0</IsAdultProduct>
+        <Label>Jessica Sorensen</Label>
+        <Languages>
+          <Language>
+            <Name>English</Name>
+            <Type>Published</Type>
+          </Language>
+        </Languages>
+        <Manufacturer>Jessica Sorensen</Manufacturer>
+        <NumberOfItems>1</NumberOfItems>
+        <NumberOfPages>317</NumberOfPages>
+        <ProductGroup>eBooks</ProductGroup>
+        <ProductTypeName>ABIS_EBOOKS</ProductTypeName>
+        <PublicationDate>2012-10-02</PublicationDate>
+        <Publisher>Jessica Sorensen</Publisher>
+        <ReleaseDate>2012-10-02</ReleaseDate>
+        <Studio>Jessica Sorensen</Studio>
+        <Title>The Secret of Ella and Micha</Title>
+      </ItemAttributes>
+      <CustomerReviews>
+        <IFrameURL>http://www.amazon.com/reviews/iframe?akid=AKIAJXBYRCZ7AKW6USBA&amp;alinkCode=xm2&amp;asin=B009LBO334&amp;atag=onlinshop0b-20&amp;exp=2012-11-15T21%3A14%3A54Z&amp;v=2&amp;sig=%2BP2q2En0aHObDFnW7%2BYFTBqwEOhx8yVdFN3VCquvEdU%3D</IFrameURL>
+        <HasReviews>true</HasReviews>
+      </CustomerReviews>
+      <EditorialReviews>
+        <EditorialReview>
+          <Source>Product Description</Source>
+          <Content>Ella and Micha have been best friends since they were kids. But one tragic night shatters their friendship and their lives forever.&lt;br /&gt;&lt;br /&gt;Ella used to be a rule-breaker with fiery attitude who wore her heart on her sleeve. But she left everything behind when she went to college and transformed into someone that follows the rules, keeps everything together, and hides all her problems. But now it's summer break and she has nowhere else to go but home. &lt;br /&gt;&lt;br /&gt;Ella fears everything she worked so hard to bury might resurface, especially with Micha living right next door. If Micha tries to tempt the old her back, she knows that it will be hard to resist.&lt;br /&gt;&lt;br /&gt;Micha is sexy, smart, confident, and can get under Ella&#8217;s skin like no one else can. He knows everything about her, including her darkest secrets. And he&#8217;s determined to bring his best friend, and the girl he loves back, no matter what it takes. &lt;br /&gt;&lt;br /&gt;(New Adult Contemporary)&lt;br /&gt;**Recommended for readers 17+ due to sexual situations and language.**&lt;br /&gt;&lt;br /&gt;"This really was very well written and just beautiful. Sorensen has done an amazing job portraying two broken people with real problems and has brought up sensitive issues and topics and handled it all so well."--Mlpmom (Book Reviewer).</Content>
+          <IsLinkSuppressed>0</IsLinkSuppressed>
+        </EditorialReview>
+      </EditorialReviews>
+    </Item>
+  </Items>
+</ItemLookupResponse>

@@ -1,0 +1,240 @@
+<ItemLookupResponse xmlns="http://webservices.amazon.com/AWSECommerceService/2011-08-01">
+  <OperationRequest>
+    <HTTPHeaders>
+      <Header Name="UserAgent" Value="python-amazon-product-api/0.2.5 +http://pypi.python.org/pypi/python-amazon-product-api/"/>
+    </HTTPHeaders>
+    <RequestId>55c26a47-69f6-4ac8-b7c7-2e9901432042</RequestId>
+    <Arguments>
+      <Argument Name="Operation" Value="ItemLookup"/>
+      <Argument Name="Service" Value="AWSECommerceService"/>
+      <Argument Name="Signature" Value="2xCJ+jXnmfLo276VBCRtyIgPwc0TMNRc67ZP4F2aU9M="/>
+      <Argument Name="AssociateTag" Value="onlinshop0b-20"/>
+      <Argument Name="Version" Value="2010-12-01"/>
+      <Argument Name="ItemId" Value="1419705849"/>
+      <Argument Name="AWSAccessKeyId" Value="AKIAJXBYRCZ7AKW6USBA"/>
+      <Argument Name="Timestamp" Value="2012-11-14T21:14:52Z"/>
+      <Argument Name="ResponseGroup" Value="                EditorialReview,Images,ItemAttributes,ItemIds,OfferFull,Offers,Reviews,SalesRank"/>
+    </Arguments>
+    <RequestProcessingTime>0.0233390000000000</RequestProcessingTime>
+  </OperationRequest>
+  <Items>
+    <Request>
+      <IsValid>True</IsValid>
+      <ItemLookupRequest>
+        <IdType>ASIN</IdType>
+        <ItemId>1419705849</ItemId>
+        <ResponseGroup>EditorialReview</ResponseGroup>
+        <ResponseGroup>Images</ResponseGroup>
+        <ResponseGroup>ItemAttributes</ResponseGroup>
+        <ResponseGroup>ItemIds</ResponseGroup>
+        <ResponseGroup>OfferFull</ResponseGroup>
+        <ResponseGroup>Offers</ResponseGroup>
+        <ResponseGroup>Reviews</ResponseGroup>
+        <ResponseGroup>SalesRank</ResponseGroup>
+        <VariationPage>All</VariationPage>
+      </ItemLookupRequest>
+    </Request>
+    <Item>
+      <ASIN>1419705849</ASIN>
+      <DetailPageURL>http://www.amazon.com/Third-Wheel-Diary-Wimpy-Book/dp/1419705849%3FSubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1419705849</DetailPageURL>
+      <ItemLinks>
+        <ItemLink>
+          <Description>Technical Details</Description>
+          <URL>http://www.amazon.com/Third-Wheel-Diary-Wimpy-Book/dp/tech-data/1419705849%3FSubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D1419705849</URL>
+        </ItemLink>
+        <ItemLink>
+          <Description>Add To Baby Registry</Description>
+          <URL>http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3D1419705849%26SubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D1419705849</URL>
+        </ItemLink>
+        <ItemLink>
+          <Description>Add To Wedding Registry</Description>
+          <URL>http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3D1419705849%26SubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D1419705849</URL>
+        </ItemLink>
+        <ItemLink>
+          <Description>Add To Wishlist</Description>
+          <URL>http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3D1419705849%26SubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D1419705849</URL>
+        </ItemLink>
+        <ItemLink>
+          <Description>Tell A Friend</Description>
+          <URL>http://www.amazon.com/gp/pdp/taf/1419705849%3FSubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D1419705849</URL>
+        </ItemLink>
+        <ItemLink>
+          <Description>All Customer Reviews</Description>
+          <URL>http://www.amazon.com/review/product/1419705849%3FSubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D1419705849</URL>
+        </ItemLink>
+        <ItemLink>
+          <Description>All Offers</Description>
+          <URL>http://www.amazon.com/gp/offer-listing/1419705849%3FSubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D1419705849</URL>
+        </ItemLink>
+      </ItemLinks>
+      <SalesRank>1</SalesRank>
+      <SmallImage>
+        <URL>http://ecx.images-amazon.com/images/I/51%2BFxTnU2KL._SL75_.jpg</URL>
+        <Height Units="pixels">75</Height>
+        <Width Units="pixels">50</Width>
+      </SmallImage>
+      <MediumImage>
+        <URL>http://ecx.images-amazon.com/images/I/51%2BFxTnU2KL._SL160_.jpg</URL>
+        <Height Units="pixels">160</Height>
+        <Width Units="pixels">108</Width>
+      </MediumImage>
+      <LargeImage>
+        <URL>http://ecx.images-amazon.com/images/I/51%2BFxTnU2KL.jpg</URL>
+        <Height Units="pixels">500</Height>
+        <Width Units="pixels">336</Width>
+      </LargeImage>
+      <ImageSets>
+        <ImageSet Category="primary">
+          <SwatchImage>
+            <URL>http://ecx.images-amazon.com/images/I/51%2BFxTnU2KL._SL30_.jpg</URL>
+            <Height Units="pixels">30</Height>
+            <Width Units="pixels">20</Width>
+          </SwatchImage>
+          <SmallImage>
+            <URL>http://ecx.images-amazon.com/images/I/51%2BFxTnU2KL._SL75_.jpg</URL>
+            <Height Units="pixels">75</Height>
+            <Width Units="pixels">50</Width>
+          </SmallImage>
+          <ThumbnailImage>
+            <URL>http://ecx.images-amazon.com/images/I/51%2BFxTnU2KL._SL75_.jpg</URL>
+            <Height Units="pixels">75</Height>
+            <Width Units="pixels">50</Width>
+          </ThumbnailImage>
+          <TinyImage>
+            <URL>http://ecx.images-amazon.com/images/I/51%2BFxTnU2KL._SL110_.jpg</URL>
+            <Height Units="pixels">110</Height>
+            <Width Units="pixels">74</Width>
+          </TinyImage>
+          <MediumImage>
+            <URL>http://ecx.images-amazon.com/images/I/51%2BFxTnU2KL._SL160_.jpg</URL>
+            <Height Units="pixels">160</Height>
+            <Width Units="pixels">108</Width>
+          </MediumImage>
+          <LargeImage>
+            <URL>http://ecx.images-amazon.com/images/I/51%2BFxTnU2KL.jpg</URL>
+            <Height Units="pixels">500</Height>
+            <Width Units="pixels">336</Width>
+          </LargeImage>
+        </ImageSet>
+      </ImageSets>
+      <ItemAttributes>
+        <Author>Jeff Kinney</Author>
+        <Binding>Hardcover</Binding>
+        <Brand>Amulet Books</Brand>
+        <EAN>9781419705847</EAN>
+        <EANList>
+          <EANListElement>9781419705847</EANListElement>
+        </EANList>
+        <ISBN>1419705849</ISBN>
+        <ItemDimensions>
+          <Height Units="hundredths-inches">85</Height>
+          <Length Units="hundredths-inches">820</Length>
+          <Weight Units="hundredths-pounds">86</Weight>
+          <Width Units="hundredths-inches">578</Width>
+        </ItemDimensions>
+        <Label>Amulet Books</Label>
+        <Languages>
+          <Language>
+            <Name>English</Name>
+            <Type>Unknown</Type>
+          </Language>
+          <Language>
+            <Name>English</Name>
+            <Type>Original Language</Type>
+          </Language>
+          <Language>
+            <Name>English</Name>
+            <Type>Published</Type>
+          </Language>
+        </Languages>
+        <ListPrice>
+          <Amount>1395</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$13.95</FormattedPrice>
+        </ListPrice>
+        <Manufacturer>Amulet Books</Manufacturer>
+        <ManufacturerMinimumAge Units="months">96</ManufacturerMinimumAge>
+        <MPN>9781419705847</MPN>
+        <NumberOfItems>1</NumberOfItems>
+        <NumberOfPages>224</NumberOfPages>
+        <PackageDimensions>
+          <Height Units="hundredths-inches">90</Height>
+          <Length Units="hundredths-inches">810</Length>
+          <Weight Units="hundredths-pounds">85</Weight>
+          <Width Units="hundredths-inches">550</Width>
+        </PackageDimensions>
+        <PackageQuantity>1</PackageQuantity>
+        <PartNumber>9781419705847</PartNumber>
+        <ProductGroup>Book</ProductGroup>
+        <ProductTypeName>ABIS_BOOK</ProductTypeName>
+        <PublicationDate>2012-11-13</PublicationDate>
+        <Publisher>Amulet Books</Publisher>
+        <ReleaseDate>2012-11-13</ReleaseDate>
+        <SKU>NEW-1ELITE-001110</SKU>
+        <Studio>Amulet Books</Studio>
+        <Title>The Third Wheel (Diary of a Wimpy Kid, Book 7)</Title>
+      </ItemAttributes>
+      <OfferSummary>
+        <LowestNewPrice>
+          <Amount>759</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$7.59</FormattedPrice>
+        </LowestNewPrice>
+        <LowestUsedPrice>
+          <Amount>937</Amount>
+          <CurrencyCode>USD</CurrencyCode>
+          <FormattedPrice>$9.37</FormattedPrice>
+        </LowestUsedPrice>
+        <TotalNew>35</TotalNew>
+        <TotalUsed>14</TotalUsed>
+        <TotalCollectible>0</TotalCollectible>
+        <TotalRefurbished>0</TotalRefurbished>
+      </OfferSummary>
+      <Offers>
+        <TotalOffers>1</TotalOffers>
+        <TotalOfferPages>1</TotalOfferPages>
+        <MoreOffersUrl>http://www.amazon.com/gp/offer-listing/1419705849%3FSubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3D1419705849</MoreOffersUrl>
+        <Offer>
+          <Merchant>
+            <Name>Amazon.com</Name>
+          </Merchant>
+          <OfferAttributes>
+            <Condition>New</Condition>
+          </OfferAttributes>
+          <OfferListing>
+            <OfferListingId>wWyE2o2LMJ4%2Blf5V6qNEQ4tuXHCrneYl0UGbUFoTnn%2BisJqzx4Do9DBsuR4si%2FApnjHTtjhJ9%2BDn8F1EafHCYBHkcd3it%2BpS7mdTucw9nrEO8MxtdvzNoA%3D%3D</OfferListingId>
+            <Price>
+              <Amount>775</Amount>
+              <CurrencyCode>USD</CurrencyCode>
+              <FormattedPrice>$7.75</FormattedPrice>
+            </Price>
+            <AmountSaved>
+              <Amount>620</Amount>
+              <CurrencyCode>USD</CurrencyCode>
+              <FormattedPrice>$6.20</FormattedPrice>
+            </AmountSaved>
+            <PercentageSaved>44</PercentageSaved>
+            <Availability>Usually ships in 24 hours</Availability>
+            <AvailabilityAttributes>
+              <AvailabilityType>now</AvailabilityType>
+              <MinimumHours>0</MinimumHours>
+              <MaximumHours>0</MaximumHours>
+            </AvailabilityAttributes>
+            <IsEligibleForSuperSaverShipping>1</IsEligibleForSuperSaverShipping>
+          </OfferListing>
+        </Offer>
+      </Offers>
+      <CustomerReviews>
+        <IFrameURL>http://www.amazon.com/reviews/iframe?akid=AKIAJXBYRCZ7AKW6USBA&amp;alinkCode=xm2&amp;asin=1419705849&amp;atag=onlinshop0b-20&amp;exp=2012-11-15T21%3A14%3A50Z&amp;v=2&amp;sig=tkABYoz84qellqP%2FcTQskBar41YX07MTo6ynUiGDIvQ%3D</IFrameURL>
+        <HasReviews>true</HasReviews>
+      </CustomerReviews>
+      <EditorialReviews>
+        <EditorialReview>
+          <Source>Product Description</Source>
+          <Content>Love is in the air&#8212;but what does that mean for Greg Heffley?&lt;BR&gt;&lt;br&gt;A Valentine&#8217;s Day dance at Greg&#8217;s middle school has turned his world upside down. As Greg scrambles to find a date, he&#8217;s worried he&#8217;ll be left out in the cold on the big night. His best friend, Rowley, doesn&#8217;t have any prospects either, but that&#8217;s a small consolation.&lt;BR&gt;&lt;br&gt;An unexpected twist gives Greg a partner for the dance and leaves Rowley the odd man out. But a lot can happen in one night, and in the end, you never know who&#8217;s going to be lucky in love.</Content>
+          <IsLinkSuppressed>0</IsLinkSuppressed>
+        </EditorialReview>
+      </EditorialReviews>
+    </Item>
+  </Items>
+</ItemLookupResponse>

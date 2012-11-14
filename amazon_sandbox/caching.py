@@ -1,13 +1,9 @@
 import os
-import tempfile
 import time
+import tempfile
+
 from lxml import etree
-
-try: # make it python2.4 compatible!
-    from hashlib import md5 # pylint: disable-msg=E0611
-except ImportError: # pragma: no cover
-    from md5 import new as md5
-
+from hashlib import md5
 from amazonproduct.api import API
 
 DEFAULT_CACHE_DIR = tempfile.mkdtemp(prefix='amzn_')
@@ -32,7 +28,8 @@ class ResponseCachingAPI (API):
         :param cachedir: Path to directory containing cached responses.
         """
         API.__init__(self, access_key_id, secret_access_key, locale, associate_tag, **kwargs)
-        self.cache, self.cachetime = cachedir, cachetime
+        self.cache = cachedir
+        self.cachetime = cachetime
         if self.cache and not os.path.isdir(self.cache):
             os.mkdir(self.cache)
 
@@ -40,8 +37,8 @@ class ResponseCachingAPI (API):
         if self.cache:
             path = os.path.join(self.cache, '%s.xml' % self.get_hash(url))
             # if response was fetched previously, use that one
-            if os.path.getmtime(path) + self.cachetime > time.time():
-                if os.path.isfile(path):
+            if os.path.isfile(path):
+                if os.path.getmtime(path) + self.cachetime > time.time():
                     return open(path)
 
         # fetch original response from Amazon

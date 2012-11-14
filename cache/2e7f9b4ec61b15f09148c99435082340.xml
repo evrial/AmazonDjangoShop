@@ -1,0 +1,156 @@
+<ItemLookupResponse xmlns="http://webservices.amazon.com/AWSECommerceService/2011-08-01">
+  <OperationRequest>
+    <HTTPHeaders>
+      <Header Name="UserAgent" Value="python-amazon-product-api/0.2.5 +http://pypi.python.org/pypi/python-amazon-product-api/"/>
+    </HTTPHeaders>
+    <RequestId>ec9aa7c2-6c8f-49b6-859b-d73b2e916e2b</RequestId>
+    <Arguments>
+      <Argument Name="Operation" Value="ItemLookup"/>
+      <Argument Name="Service" Value="AWSECommerceService"/>
+      <Argument Name="Signature" Value="LnTFgY0t9vk5JiefE+TSDXul+N74AU/qiSaJIVDJGtU="/>
+      <Argument Name="AssociateTag" Value="onlinshop0b-20"/>
+      <Argument Name="Version" Value="2010-12-01"/>
+      <Argument Name="ItemId" Value="B008EXO3WQ"/>
+      <Argument Name="AWSAccessKeyId" Value="AKIAJXBYRCZ7AKW6USBA"/>
+      <Argument Name="Timestamp" Value="2012-11-14T21:14:53Z"/>
+      <Argument Name="ResponseGroup" Value="                EditorialReview,Images,ItemAttributes,ItemIds,OfferFull,Offers,Reviews,SalesRank"/>
+    </Arguments>
+    <RequestProcessingTime>0.0194820000000000</RequestProcessingTime>
+  </OperationRequest>
+  <Items>
+    <Request>
+      <IsValid>True</IsValid>
+      <ItemLookupRequest>
+        <IdType>ASIN</IdType>
+        <ItemId>B008EXO3WQ</ItemId>
+        <ResponseGroup>EditorialReview</ResponseGroup>
+        <ResponseGroup>Images</ResponseGroup>
+        <ResponseGroup>ItemAttributes</ResponseGroup>
+        <ResponseGroup>ItemIds</ResponseGroup>
+        <ResponseGroup>OfferFull</ResponseGroup>
+        <ResponseGroup>Offers</ResponseGroup>
+        <ResponseGroup>Reviews</ResponseGroup>
+        <ResponseGroup>SalesRank</ResponseGroup>
+        <VariationPage>All</VariationPage>
+      </ItemLookupRequest>
+    </Request>
+    <Item>
+      <ASIN>B008EXO3WQ</ASIN>
+      <DetailPageURL>http://www.amazon.com/The-Perfect-Hope-BoonsBoro-ebook/dp/B008EXO3WQ%3FSubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB008EXO3WQ</DetailPageURL>
+      <ItemLinks>
+        <ItemLink>
+          <Description>Technical Details</Description>
+          <URL>http://www.amazon.com/The-Perfect-Hope-BoonsBoro-ebook/dp/tech-data/B008EXO3WQ%3FSubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB008EXO3WQ</URL>
+        </ItemLink>
+        <ItemLink>
+          <Description>Add To Baby Registry</Description>
+          <URL>http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3DB008EXO3WQ%26SubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB008EXO3WQ</URL>
+        </ItemLink>
+        <ItemLink>
+          <Description>Add To Wedding Registry</Description>
+          <URL>http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3DB008EXO3WQ%26SubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB008EXO3WQ</URL>
+        </ItemLink>
+        <ItemLink>
+          <Description>Add To Wishlist</Description>
+          <URL>http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3DB008EXO3WQ%26SubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB008EXO3WQ</URL>
+        </ItemLink>
+        <ItemLink>
+          <Description>Tell A Friend</Description>
+          <URL>http://www.amazon.com/gp/pdp/taf/B008EXO3WQ%3FSubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB008EXO3WQ</URL>
+        </ItemLink>
+        <ItemLink>
+          <Description>All Customer Reviews</Description>
+          <URL>http://www.amazon.com/review/product/B008EXO3WQ%3FSubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB008EXO3WQ</URL>
+        </ItemLink>
+        <ItemLink>
+          <Description>All Offers</Description>
+          <URL>http://www.amazon.com/gp/offer-listing/B008EXO3WQ%3FSubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB008EXO3WQ</URL>
+        </ItemLink>
+      </ItemLinks>
+      <SalesRank>3</SalesRank>
+      <SmallImage>
+        <URL>http://ecx.images-amazon.com/images/I/51vrhZCDJoL._SL75_.jpg</URL>
+        <Height Units="pixels">75</Height>
+        <Width Units="pixels">51</Width>
+      </SmallImage>
+      <MediumImage>
+        <URL>http://ecx.images-amazon.com/images/I/51vrhZCDJoL._SL160_.jpg</URL>
+        <Height Units="pixels">160</Height>
+        <Width Units="pixels">108</Width>
+      </MediumImage>
+      <LargeImage>
+        <URL>http://ecx.images-amazon.com/images/I/51vrhZCDJoL.jpg</URL>
+        <Height Units="pixels">500</Height>
+        <Width Units="pixels">339</Width>
+      </LargeImage>
+      <ImageSets>
+        <ImageSet Category="primary">
+          <SwatchImage>
+            <URL>http://ecx.images-amazon.com/images/I/51vrhZCDJoL._SL30_.jpg</URL>
+            <Height Units="pixels">30</Height>
+            <Width Units="pixels">20</Width>
+          </SwatchImage>
+          <SmallImage>
+            <URL>http://ecx.images-amazon.com/images/I/51vrhZCDJoL._SL75_.jpg</URL>
+            <Height Units="pixels">75</Height>
+            <Width Units="pixels">51</Width>
+          </SmallImage>
+          <ThumbnailImage>
+            <URL>http://ecx.images-amazon.com/images/I/51vrhZCDJoL._SL75_.jpg</URL>
+            <Height Units="pixels">75</Height>
+            <Width Units="pixels">51</Width>
+          </ThumbnailImage>
+          <TinyImage>
+            <URL>http://ecx.images-amazon.com/images/I/51vrhZCDJoL._SL110_.jpg</URL>
+            <Height Units="pixels">110</Height>
+            <Width Units="pixels">75</Width>
+          </TinyImage>
+          <MediumImage>
+            <URL>http://ecx.images-amazon.com/images/I/51vrhZCDJoL._SL160_.jpg</URL>
+            <Height Units="pixels">160</Height>
+            <Width Units="pixels">108</Width>
+          </MediumImage>
+          <LargeImage>
+            <URL>http://ecx.images-amazon.com/images/I/51vrhZCDJoL.jpg</URL>
+            <Height Units="pixels">500</Height>
+            <Width Units="pixels">339</Width>
+          </LargeImage>
+        </ImageSet>
+      </ImageSets>
+      <ItemAttributes>
+        <Author>Nora Roberts</Author>
+        <Binding>Kindle Edition</Binding>
+        <EISBN>9781101612231</EISBN>
+        <Format>Kindle eBook</Format>
+        <Label>Berkley</Label>
+        <Languages>
+          <Language>
+            <Name>English</Name>
+            <Type>Published</Type>
+          </Language>
+        </Languages>
+        <Manufacturer>Berkley</Manufacturer>
+        <NumberOfItems>1</NumberOfItems>
+        <NumberOfPages>337</NumberOfPages>
+        <ProductGroup>eBooks</ProductGroup>
+        <ProductTypeName>ABIS_EBOOKS</ProductTypeName>
+        <PublicationDate>2012-11-06</PublicationDate>
+        <Publisher>Berkley</Publisher>
+        <ReleaseDate>2012-11-06</ReleaseDate>
+        <Studio>Berkley</Studio>
+        <Title>The Perfect Hope: Book Three of the Inn BoonsBoro Trilogy</Title>
+      </ItemAttributes>
+      <CustomerReviews>
+        <IFrameURL>http://www.amazon.com/reviews/iframe?akid=AKIAJXBYRCZ7AKW6USBA&amp;alinkCode=xm2&amp;asin=B008EXO3WQ&amp;atag=onlinshop0b-20&amp;exp=2012-11-15T21%3A14%3A51Z&amp;v=2&amp;sig=Z78DDFVMytB2XoOX3Oi%2FvVA%2Fk4khlB%2B52mi017cg5TE%3D</IFrameURL>
+        <HasReviews>true</HasReviews>
+      </CustomerReviews>
+      <EditorialReviews>
+        <EditorialReview>
+          <Source>Product Description</Source>
+          <Content>&lt;DIV&gt;A new novel of starting over and star-crossed love. &lt;BR&gt;&lt;BR&gt;#1 &lt;I&gt;New York Times &lt;/I&gt;bestselling author Nora Roberts introduces you to the Montgomery brothers&#8212;Beckett, Ryder, and Owen&#8212;as they bring an intimate bed-and-breakfast to life in their hometown. &lt;BR&gt;&lt;BR&gt;Ryder is the hardest Montgomery brother to figure out&#8212;with a tough-as-nails outside and possibly nothing too soft underneath. He&#8217;s surly and unsociable, but when he straps on a tool belt, no woman can resist his sexy swagger. Except apparently Hope Beaumont, the innkeeper of his own Inn BoonsBoro&#8230; &lt;BR&gt;&lt;BR&gt;As the former manager of a D.C. hotel, Hope is used to excitement and glamour, but that doesn&#8217;t mean she can&#8217;t appreciate the joys of small-town living. She&#8217;s where she wants to be&#8212;except for in her love life. Her only interaction with the opposite sex has been sparring with the infuriating Ryder, who always seems to get under her skin. Still, no one can deny the electricity that crackles between them&#8230;a spark that ignited with a New Year&#8217;s Eve kiss. &lt;BR&gt;&lt;BR&gt;While the Inn is running smoothly, thanks to Hope&#8217;s experience and unerring instincts, her big-city past is about to make an unwelcome&#8212;and embarrassing&#8212;appearance. Seeing Hope vulnerable stirs up Ryder&#8217;s emotions and makes him realize that while Hope may not be perfect, she just might be perfect for him&#8230; &lt;BR&gt;&lt;/div&gt;</Content>
+          <IsLinkSuppressed>0</IsLinkSuppressed>
+        </EditorialReview>
+      </EditorialReviews>
+    </Item>
+  </Items>
+</ItemLookupResponse>

@@ -1,0 +1,152 @@
+<ItemLookupResponse xmlns="http://webservices.amazon.com/AWSECommerceService/2011-08-01">
+  <OperationRequest>
+    <HTTPHeaders>
+      <Header Name="UserAgent" Value="python-amazon-product-api/0.2.5 +http://pypi.python.org/pypi/python-amazon-product-api/"/>
+    </HTTPHeaders>
+    <RequestId>547205a5-9784-4f3a-b401-78c8831c5bb7</RequestId>
+    <Arguments>
+      <Argument Name="Operation" Value="ItemLookup"/>
+      <Argument Name="Service" Value="AWSECommerceService"/>
+      <Argument Name="Signature" Value="0N76o3jLKBiLvu34NUeo89Enk36JspWvFNVwimdpJQE="/>
+      <Argument Name="AssociateTag" Value="onlinshop0b-20"/>
+      <Argument Name="Version" Value="2010-12-01"/>
+      <Argument Name="ItemId" Value="B009I3UOKQ"/>
+      <Argument Name="AWSAccessKeyId" Value="AKIAJXBYRCZ7AKW6USBA"/>
+      <Argument Name="Timestamp" Value="2012-11-14T21:14:57Z"/>
+      <Argument Name="ResponseGroup" Value="                EditorialReview,Images,ItemAttributes,ItemIds,OfferFull,Offers,Reviews,SalesRank"/>
+    </Arguments>
+    <RequestProcessingTime>0.0231520000000000</RequestProcessingTime>
+  </OperationRequest>
+  <Items>
+    <Request>
+      <IsValid>True</IsValid>
+      <ItemLookupRequest>
+        <IdType>ASIN</IdType>
+        <ItemId>B009I3UOKQ</ItemId>
+        <ResponseGroup>EditorialReview</ResponseGroup>
+        <ResponseGroup>Images</ResponseGroup>
+        <ResponseGroup>ItemAttributes</ResponseGroup>
+        <ResponseGroup>ItemIds</ResponseGroup>
+        <ResponseGroup>OfferFull</ResponseGroup>
+        <ResponseGroup>Offers</ResponseGroup>
+        <ResponseGroup>Reviews</ResponseGroup>
+        <ResponseGroup>SalesRank</ResponseGroup>
+        <VariationPage>All</VariationPage>
+      </ItemLookupRequest>
+    </Request>
+    <Item>
+      <ASIN>B009I3UOKQ</ASIN>
+      <DetailPageURL>http://www.amazon.com/The-Unwanted-Wife-ebook/dp/B009I3UOKQ%3FSubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB009I3UOKQ</DetailPageURL>
+      <ItemLinks>
+        <ItemLink>
+          <Description>Technical Details</Description>
+          <URL>http://www.amazon.com/The-Unwanted-Wife-ebook/dp/tech-data/B009I3UOKQ%3FSubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB009I3UOKQ</URL>
+        </ItemLink>
+        <ItemLink>
+          <Description>Add To Baby Registry</Description>
+          <URL>http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3DB009I3UOKQ%26SubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB009I3UOKQ</URL>
+        </ItemLink>
+        <ItemLink>
+          <Description>Add To Wedding Registry</Description>
+          <URL>http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3DB009I3UOKQ%26SubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB009I3UOKQ</URL>
+        </ItemLink>
+        <ItemLink>
+          <Description>Add To Wishlist</Description>
+          <URL>http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3DB009I3UOKQ%26SubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB009I3UOKQ</URL>
+        </ItemLink>
+        <ItemLink>
+          <Description>Tell A Friend</Description>
+          <URL>http://www.amazon.com/gp/pdp/taf/B009I3UOKQ%3FSubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB009I3UOKQ</URL>
+        </ItemLink>
+        <ItemLink>
+          <Description>All Customer Reviews</Description>
+          <URL>http://www.amazon.com/review/product/B009I3UOKQ%3FSubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB009I3UOKQ</URL>
+        </ItemLink>
+        <ItemLink>
+          <Description>All Offers</Description>
+          <URL>http://www.amazon.com/gp/offer-listing/B009I3UOKQ%3FSubscriptionId%3DAKIAJXBYRCZ7AKW6USBA%26tag%3Donlinshop0b-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB009I3UOKQ</URL>
+        </ItemLink>
+      </ItemLinks>
+      <SalesRank>7</SalesRank>
+      <SmallImage>
+        <URL>http://ecx.images-amazon.com/images/I/41d5LBjhnzL._SL75_.jpg</URL>
+        <Height Units="pixels">75</Height>
+        <Width Units="pixels">56</Width>
+      </SmallImage>
+      <MediumImage>
+        <URL>http://ecx.images-amazon.com/images/I/41d5LBjhnzL._SL160_.jpg</URL>
+        <Height Units="pixels">160</Height>
+        <Width Units="pixels">120</Width>
+      </MediumImage>
+      <LargeImage>
+        <URL>http://ecx.images-amazon.com/images/I/41d5LBjhnzL.jpg</URL>
+        <Height Units="pixels">500</Height>
+        <Width Units="pixels">375</Width>
+      </LargeImage>
+      <ImageSets>
+        <ImageSet Category="primary">
+          <SwatchImage>
+            <URL>http://ecx.images-amazon.com/images/I/41d5LBjhnzL._SL30_.jpg</URL>
+            <Height Units="pixels">30</Height>
+            <Width Units="pixels">22</Width>
+          </SwatchImage>
+          <SmallImage>
+            <URL>http://ecx.images-amazon.com/images/I/41d5LBjhnzL._SL75_.jpg</URL>
+            <Height Units="pixels">75</Height>
+            <Width Units="pixels">56</Width>
+          </SmallImage>
+          <ThumbnailImage>
+            <URL>http://ecx.images-amazon.com/images/I/41d5LBjhnzL._SL75_.jpg</URL>
+            <Height Units="pixels">75</Height>
+            <Width Units="pixels">56</Width>
+          </ThumbnailImage>
+          <TinyImage>
+            <URL>http://ecx.images-amazon.com/images/I/41d5LBjhnzL._SL110_.jpg</URL>
+            <Height Units="pixels">110</Height>
+            <Width Units="pixels">82</Width>
+          </TinyImage>
+          <MediumImage>
+            <URL>http://ecx.images-amazon.com/images/I/41d5LBjhnzL._SL160_.jpg</URL>
+            <Height Units="pixels">160</Height>
+            <Width Units="pixels">120</Width>
+          </MediumImage>
+          <LargeImage>
+            <URL>http://ecx.images-amazon.com/images/I/41d5LBjhnzL.jpg</URL>
+            <Height Units="pixels">500</Height>
+            <Width Units="pixels">375</Width>
+          </LargeImage>
+        </ImageSet>
+      </ImageSets>
+      <ItemAttributes>
+        <Author>Natasha Anders</Author>
+        <Binding>Kindle Edition</Binding>
+        <Format>Kindle eBook</Format>
+        <IsAdultProduct>0</IsAdultProduct>
+        <Languages>
+          <Language>
+            <Name>English</Name>
+            <Type>Published</Type>
+          </Language>
+        </Languages>
+        <NumberOfItems>1</NumberOfItems>
+        <NumberOfPages>215</NumberOfPages>
+        <ProductGroup>eBooks</ProductGroup>
+        <ProductTypeName>ABIS_EBOOKS</ProductTypeName>
+        <PublicationDate>2012-09-26</PublicationDate>
+        <ReleaseDate>2012-09-26</ReleaseDate>
+        <Title>The Unwanted Wife</Title>
+      </ItemAttributes>
+      <CustomerReviews>
+        <IFrameURL>http://www.amazon.com/reviews/iframe?akid=AKIAJXBYRCZ7AKW6USBA&amp;alinkCode=xm2&amp;asin=B009I3UOKQ&amp;atag=onlinshop0b-20&amp;exp=2012-11-15T21%3A14%3A55Z&amp;v=2&amp;sig=n2hbrjNoRqsik%2FXTx2uW0uj%2Fa8mK7NqSj4OotYk1v1E%3D</IFrameURL>
+        <HasReviews>true</HasReviews>
+      </CustomerReviews>
+      <EditorialReviews>
+        <EditorialReview>
+          <Source>Product Description</Source>
+          <Content>All Alessandro de Lucci wants from his wife is a son but after a year and a half of unhappiness and disillusionment, all Theresa de Lucci wants from her ice cold husband is a divorce. Unfortunate timing, since Theresa is about to discover that she&#8217;s finally pregnant and Alessandro is about to discover that he isn&#8217;t willing to lose Theresa.</Content>
+          <IsLinkSuppressed>0</IsLinkSuppressed>
+        </EditorialReview>
+      </EditorialReviews>
+    </Item>
+  </Items>
+</ItemLookupResponse>
