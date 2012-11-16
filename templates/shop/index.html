@@ -7,10 +7,10 @@
 </head>
 
 <body>
-
+<a href="/admin/">Admin</a>
 <div class="container">
 <ul>{% for category in categories %}
-  <li><a href="category/{{ category.amazon_node_id }}/">{{ category.title }}</a><li>
+  <li><a href="{{ category.slug }}/">{{ category.title }}</a></li>
 {% endfor %}</ul>
 
 
@@ -22,8 +22,8 @@
     <ul>
       <img src="{{ product.medium_image }}">
       <li>ASIN: {{ product.asin }}</li>
-      <li>Description: {{ product.description|linebreaks }}</li>
-      <li>Price: {{ product.price }}</li>
+      <li>Description: {{ product.description|safe }}</li>
+      {% if product.price %}<li>Price: {{ product.price }}</li>{% endif %}
       <li>Popularity: {{ product.popularity }}</li>
     </ul>
   </div>

@@ -7,18 +7,20 @@
 </head>
 
 <body>
+<a href="/">Home</a> <a href="/admin/">Admin</a>
 
 <div class="container">
 
 <h1>My awesome shop products:</h1>
-{% for product in category %}
+<h2>in category: {{ category.title }}</h2>
+
+{% for product in products %}
   <div class="product">
-    <!-- <h2><a href="{{ product.category.slug }}/">{{ product.category }}</a></h2> -->
-    <h3><a href="{{ product.category.slug }}/{{ product.asin }}/">{{ product.title }}</a></h3>
+    <h3><a href="/{{ product.category.slug }}/{{ product.asin }}/">{{ product.title }}</a></h3>
     <ul>
       <img src="{{ product.medium_image }}">
       <li>ASIN: {{ product.asin }}</li>
-      <li>Description: {{ product.description|linebreaks }}</li>
+      <li>Description: {{ product.description|safe }}</li>
       <li>Price: {{ product.price }}</li>
       <li>Popularity: {{ product.popularity }}</li>
     </ul>

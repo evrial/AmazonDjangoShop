@@ -15,7 +15,7 @@ class ProductAdmin(admin.ModelAdmin):
     list_display = ('category', 'title', 'asin', 'price', 'popularity')
     list_display_links = ('title',)
     list_filter = ('category',)
-    search_fields = ['title', 'description', 'asin']
+    search_fields = ['title', 'description', 'asin', 'manufacturer']
 
 class StaticAdmin(admin.ModelAdmin):
     list_display = ('title', 'slug', 'visible')
