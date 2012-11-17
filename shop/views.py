@@ -1,4 +1,4 @@
-from django.core.paginator import Paginator
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
 
@@ -15,14 +15,26 @@ def home(request):
     	}, context_instance=RequestContext(request))
 
 def category_view(request, slug):
-    node = Category.objects.get(slug=slug)
-    fetch_category(node.get_search_index_display(), node.amazon_node_id)
+    category = Category.objects.get(slug=slug)
+    fetch_category(category.get_search_index_display(), category.amazon_node_id)
 
     product_entries = Product.objects.filter(category__slug=slug,
-        category__visible=True).order_by('popularity')[:20]
+        category__visible=True).order_by('popularity') #[:20]
+    paginator = Paginator(product_entries, 20)
+
+    page = request.GET.get('page')
+    try:
+        products = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        products = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        products = paginator.page(paginator.num_pages)
+
     return render_to_response('shop/category_view.html', {
-        'products': product_entries,
-        'category': node,
+        'products': products,
+        'category': category,
         }, context_instance=RequestContext(request))
 
 def product_page(request, cat_slug, asin):

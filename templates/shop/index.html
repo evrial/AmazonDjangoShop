@@ -4,6 +4,10 @@
 <head>
     <meta charset="utf-8" />
     <title>My awesome shop</title>
+    <style>
+      .container {width:70%;margin:0 auto;}
+      .product {float: left; width: 200px;height: 400px;}
+    </style>
 </head>
 
 <body>
@@ -14,11 +18,11 @@
 {% endfor %}</ul>
 
 
-<h1>My awesome shop products:</h1>
+<h1>Popular products</h1>
 {% for product in products %}
   <div class="product">
-    <h2><a href="/{{ product.category.slug }}/">{{ product.category }}</a></h2>
-    <h3><a href="/{{ product.category.slug }}/{{ product.asin }}/">{{ product.title }}</a></h3>
+    <a href="/{{ product.category.slug }}/">{{ product.category }}</a><br>
+    <a href="/{{ product.category.slug }}/{{ product.asin }}/">{{ product.title }}</a>
     <ul>
       <img src="{{ product.medium_image }}">
       <li>ASIN: {{ product.asin }}</li>
@@ -26,7 +30,6 @@
       <li>Popularity: {{ product.popularity }}</li>
     </ul>
   </div>
-  <hr>
 {% endfor %}
 </div>
 

@@ -4,30 +4,47 @@
 <head>
     <meta charset="utf-8" />
     <title>My awesome shop</title>
+    <style>
+      .container {width:70%;margin:0 auto;}
+      .product {float: left; width: 200px;height: 350px;}
+    </style>
 </head>
 
 <body>
 <a href="/">Home</a> <a href="/admin/">Admin</a>
 
 <div class="container">
-
-<h1>My awesome shop products:</h1>
-<h2>in category: {{ category.title }}</h2>
+<h1>Popular products in category: {{ category.title }}</h1>
 
 {% for product in products %}
   <div class="product">
-    <h3><a href="/{{ product.category.slug }}/{{ product.asin }}/">{{ product.title }}</a></h3>
+    <a href="/{{ product.category.slug }}/{{ product.asin }}/"><b>{{ product.title }}</b></a>
     <ul>
-      <img src="{{ product.medium_image }}">
+      <a href="/{{ product.category.slug }}/{{ product.asin }}/"><img src="{{ product.medium_image }}"></a>
       <li>ASIN: {{ product.asin }}</li>
       <li>Price: {{ product.price }}</li>
       <li>Popularity: {{ product.popularity }}</li>
     </ul>
   </div>
-  <hr>
 {% endfor %}
-</div>
 
+
+</div>
+<div class="pagination">
+    <span class="step-links">
+        {% if products.has_previous %}
+            <a href="?page={{ products.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ products.number }} of {{ products.paginator.num_pages }}
+        </span>
+
+        {% if products.has_next %}
+            <a href="?page={{ products.next_page_number }}">next</a>
+        {% endif %}
+    </span>
+</div>
 </body>
 
 </html>
