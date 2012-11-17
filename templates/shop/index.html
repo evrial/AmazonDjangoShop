@@ -10,19 +10,18 @@
 <a href="/admin/">Admin</a>
 <div class="container">
 <ul>{% for category in categories %}
-  <li><a href="{{ category.slug }}/">{{ category.title }}</a></li>
+  <li><a href="/{{ category.slug }}/">{{ category.title }}</a></li>
 {% endfor %}</ul>
 
 
 <h1>My awesome shop products:</h1>
 {% for product in products %}
   <div class="product">
-    <h2><a href="{{ product.category.slug }}/">{{ product.category }}</a></h2>
-    <h3><a href="{{ product.category.slug }}/{{ product.asin }}/">{{ product.title }}</a></h3>
+    <h2><a href="/{{ product.category.slug }}/">{{ product.category }}</a></h2>
+    <h3><a href="/{{ product.category.slug }}/{{ product.asin }}/">{{ product.title }}</a></h3>
     <ul>
       <img src="{{ product.medium_image }}">
       <li>ASIN: {{ product.asin }}</li>
-      <li>Description: {{ product.description|safe }}</li>
       {% if product.price %}<li>Price: {{ product.price }}</li>{% endif %}
       <li>Popularity: {{ product.popularity }}</li>
     </ul>

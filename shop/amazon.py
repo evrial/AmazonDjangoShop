@@ -1,22 +1,23 @@
 import caching
+
 from models import Category, Product
+from amazonproduct.errors import AWSError
+
 # Amazon Product Advertising API
 AWS_KEY = 'AKIAJXBYRCZ7AKW6USBA'
 SECRET_KEY = '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'
 ASSOCIATE_TAG = 'onlinshop0b-20'
 
 
-def fetch(amazon_node_id):
+def fetch_category(search_index, amazon_node_id):
     api = caching.ResponseCachingAPI(AWS_KEY, SECRET_KEY, 'us', ASSOCIATE_TAG,
-        cachedir='cache', cachetime=3600)
+    cachedir='cache', cachetime=86400)
 
-    category = api.browse_node_lookup(str(amazon_node_id), response_group='TopSellers')
+    try:
+        for root in api.item_search(search_index, BrowseNode=str(amazon_node_id), ResponseGroup='\
+            EditorialReview,Images,ItemAttributes,ItemIds,OfferFull,Offers,Reviews,SalesRank'):
 
-    for i in category.BrowseNodes.BrowseNode.TopSellers.TopSeller:
-        for j in i.ASIN:
-            product = api.item_lookup(item_id=str(j), ResponseGroup="\
-                EditorialReview,Images,ItemAttributes,ItemIds,OfferFull,Offers,Reviews,SalesRank")
-            for p in product.Items.Item:
+            for p in root.Items.Item:
                 g = Product()
                 g.category = Category.objects.get(amazon_node_id=amazon_node_id)
                 g.asin = unicode(p.ASIN)
@@ -24,7 +25,7 @@ def fetch(amazon_node_id):
                 try:
                     g.popularity = unicode(p.SalesRank)
                 except:
-                    g.popularity = None
+                    g.popularity = 666
                 try:
                     if hasattr(p.ItemAttributes, 'ListPrice'):
                         g.price = unicode(p.ItemAttributes.ListPrice.FormattedPrice)
@@ -36,10 +37,17 @@ def fetch(amazon_node_id):
                     g.description = unicode(p.EditorialReviews.EditorialReview.Content)
                 except:
                     g.description = None
-                g.medium_image = unicode(p.MediumImage.URL)
-                g.large_image = unicode(p.LargeImage.URL)
+                try:
+                    g.medium_image = unicode(p.MediumImage.URL)
+                    g.large_image = unicode(p.LargeImage.URL)
+                except:
+                    pass
                 try:
                     g.manufacturer = unicode(p.ItemAttributes.Manufacturer)
                 except:
                     g.manufacturer = "unknown"
                 g.save()
+
+    except AWSError, e:
+        if e.code == 'AWS.ParameterOutOfRange':
+            pass

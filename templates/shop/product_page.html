@@ -9,13 +9,13 @@
 <body>
 <a href="/admin/">Admin</a>
 <div class="container">
+  <h2><a href="/">Home</a> / <a href="/{{ product.category.slug }}/">{{ product.category }}</a></h2>
 <h1>{{ product.title }}</h1>
   <div class="product">
-    <h2>{{ product.category }}</h2>
-    <h3>{{ product.title }}</h3>
     <ul>
+      <img src="{{ product.large_image }}">
       <li>ASIN: {{ product.asin }}</li>
-      <li>Description: {{ product.description|linebreaks }}</li>
+      <li>Description: {{ product.description|safe }}</li>
       <li>Price: {{ product.price }}</li>
       <li>Popularity: {{ product.popularity }}</li>
     </ul>
