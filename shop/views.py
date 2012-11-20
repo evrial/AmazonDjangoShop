@@ -5,13 +5,14 @@ from django.template import RequestContext
 from amazon import fetch_category
 from models import Category, Product, StaticPage
 
-def home(request):
-    categories = Category.objects.filter(visible=True).order_by('title')
+categories = Category.objects.filter(visible=True).order_by('title')
 
-    entries = Product.objects.filter(category__visible=True).order_by('popularity')[:10]
+def home(request):
+    entries = Product.objects.filter(category__visible=True).order_by('popularity')[:12]
     return render_to_response('shop/index.html', {
     	'products': entries,
     	'categories': categories,
+        'noimage': 'http://placehold.it/150x150',
     	}, context_instance=RequestContext(request))
 
 def category_view(request, slug):
@@ -34,6 +35,7 @@ def category_view(request, slug):
 
     return render_to_response('shop/category_view.html', {
         'products': products,
+        'categories': categories,
         'category': category,
         }, context_instance=RequestContext(request))
 
@@ -42,7 +44,8 @@ def product_page(request, cat_slug, asin):
         category__visible=True)
 
     return render_to_response('shop/product_page.html',{
-        'product': product
+        'product': product,
+        'categories': categories,
         }, context_instance=RequestContext(request))
 
 
@@ -50,4 +53,5 @@ def static_page(request, slug):
     page = get_object_or_404(StaticPage, visible=True, slug=slug)
     return render_to_response('shop/static.html', {
     	'page': page,
+        'categories': categories,
     	}, context_instance=RequestContext(request))

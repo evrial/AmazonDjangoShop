@@ -1,38 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "shop/base.html" %}
 
-<head>
-    <meta charset="utf-8" />
-    <title>My awesome shop</title>
-    <style>
-      .container {width:70%;margin:0 auto;}
-      .product {float: left; width: 200px;height: 400px;}
-    </style>
-</head>
+{% block title %}Amazon Django Shop{% endblock %}
 
-<body>
-<a href="/admin/">Admin</a>
-<div class="container">
-<ul>{% for category in categories %}
-  <li><a href="/{{ category.slug }}/">{{ category.title }}</a></li>
-{% endfor %}</ul>
-
-
-<h1>Popular products</h1>
-{% for product in products %}
-  <div class="product">
-    <a href="/{{ product.category.slug }}/">{{ product.category }}</a><br>
-    <a href="/{{ product.category.slug }}/{{ product.asin }}/">{{ product.title }}</a>
-    <ul>
-      <img src="{{ product.medium_image }}">
-      <li>ASIN: {{ product.asin }}</li>
-      {% if product.price %}<li>Price: {{ product.price }}</li>{% endif %}
-      <li>Popularity: {{ product.popularity }}</li>
-    </ul>
-  </div>
-{% endfor %}
+{% block popular_products %}
+<div class="span9 popular_products">
+  <h3>Popular products</h3><br />
+  <ul class="thumbnails">
+    {% for product in products %}
+    <li class="span2">
+      <div class="thumbnail">
+      <a href="/{{ product.category.slug }}/{{ product.asin }}/" title="{{ product.title }}">
+        <img alt="{{ product.title }}" src="{% firstof product.medium_image noimage %}" />
+      </a>
+      <div class="caption">
+        <a href="/{{ product.category.slug }}/{{ product.asin }}/" title="{{ product.title }}">
+          <h6>{{ product.title|truncatechars:20 }}</h6>
+        </a><a class="btn btn-mini" href="#" rel="8">Add to <i class="icon-shopping-cart"></i></a> <span class="label label-info price">
+        {% if product.price %}{{ product.price }}{% endif %}
+      </span>
+      </div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
 </div>
-
-</body>
-
-</html>
+{% endblock %}

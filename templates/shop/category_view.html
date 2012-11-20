@@ -1,36 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "shop/base.html" %}
 
-<head>
-    <meta charset="utf-8" />
-    <title>My awesome shop</title>
-    <style>
-      .container {width:70%;margin:0 auto;}
-      .product {float: left; width: 200px;height: 350px;}
-    </style>
-</head>
+{% block title %}Amazon Django Shop{% endblock %}
 
-<body>
-<a href="/">Home</a> <a href="/admin/">Admin</a>
-
-<div class="container">
-<h1>Popular products in category: {{ category.title }}</h1>
-
-{% for product in products %}
-  <div class="product">
-    <a href="/{{ product.category.slug }}/{{ product.asin }}/"><b>{{ product.title }}</b></a>
-    <ul>
-      <a href="/{{ product.category.slug }}/{{ product.asin }}/"><img src="{{ product.medium_image }}"></a>
-      <li>ASIN: {{ product.asin }}</li>
-      <li>Price: {{ product.price }}</li>
-      <li>Popularity: {{ product.popularity }}</li>
-    </ul>
-  </div>
-{% endfor %}
-
-
+{% block popular_products %}
+<div class="span9 popular_products">
+  <h3>Popular products in category: {{ category.title }}</h3><br />
+  <ul class="thumbnails">
+    {% for product in products %}
+    <li class="span2">
+      <div class="thumbnail">
+      <a href="/{{ product.category.slug }}/{{ product.asin }}/" title="{{ product.title }}">
+        <img alt="{{ product.title }}" src="{% firstof product.medium_image noimage %}" />
+      </a>
+      <div class="caption">
+        <a href="/{{ product.category.slug }}/{{ product.asin }}/" title="{{ product.title }}">
+          <h6>{{ product.title|truncatechars:20 }}</h6>
+        </a>
+        <span class="label label-info price">
+        {% if product.price %}{{ product.price }}{% endif %}</span>
+        <a class="btn btn-small" href="#" rel="8">Add to <i class="icon-shopping-cart"></i></a>
+      </div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
 </div>
-<div class="pagination">
+{% endblock %}
+
+{% block pagination %}
+<div class="pagination" align="center">
     <span class="step-links">
         {% if products.has_previous %}
             <a href="?page={{ products.previous_page_number }}">previous</a>
@@ -45,6 +43,4 @@
         {% endif %}
     </span>
 </div>
-</body>
-
-</html>
+{% endblock %}

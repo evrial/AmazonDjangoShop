@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>{% block title %}Bootstrap Shopping Cart{% endblock %}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Le styles -->
+<link href="/static/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="/static/css/main.css" rel="stylesheet">
+<link href="/static/css/jquery.rating.css" rel="stylesheet">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+
+<div class="container">
+	<div class="row"><!-- start header -->
+		<div class="span6 logo">
+			<a href="/"><h1>Amazon Django Shop</h1></a>
+		</div>
+		<div class="span6">
+			<div class="row" style="padding-bottom:15px;">
+				<div class="links pull-right">
+					<a href="/">Home</a> |
+					<a href="/admin/">Admin</a> |
+					<a href="cart.html">Shopping Cart</a> |
+					<a href="/page/about/">About</a> |
+					<a href="/page/contact/">Contact</a>
+				</div>
+			</div>
+		</div>
+	</div><!-- end header -->
+	
+	<div class="row"><!-- start nav -->
+		<div class="span12">
+			<div class="navbar">
+				<div class="navbar-inner">
+					<div class="nav-collapse">
+					  <ul class="nav">
+						  <li class="dropdown">
+						  <a href="category.html" class="dropdown-toggle" data-toggle="dropdown">Desktops <b class="caret"></b></a>
+						  <ul class="dropdown-menu">
+							<li><a href="listings.html">PC</a></li>
+							<li><a href="listings.html">Mac</a></li>
+							<li class="divider"></li>
+							<li class="nav-header">Accessories</li>
+							<li><a href="listings.html">Keyboard</a></li>
+							<li><a href="listings.html">Speakers</a></li>
+						  </ul>
+						</li>
+						<li><a href="category.html">Laptops</a></li>
+						<li><a href="category.html">Components</a></li>
+						<li><a href="category.html">Tablets</a></li>
+						<li class="dropdown">
+						  <a href="category.html" class="dropdown-toggle" data-toggle="dropdown">Software <b class="caret"></b></a>
+						  <ul class="dropdown-menu">
+							<li><a href="listings.html">Business &amp; Office</a></li>
+							<li><a href="listings.html">Children's Fun &amp; Learning</a></li>
+							<li><a href="listings.html"> Digital Imaging</a></li>
+							<li class="divider"></li>
+							<li class="nav-header">PC Games</li>
+							<li><a href="listings.html">Action &amp; Shooter</a></li>
+							<li><a href="listings.html">Adventure</a></li>
+							<li><a href="listings.html">Fighting</a></li>
+						  </ul>
+						</li>
+						<li><a href="listings.html">Phones &amp; PDAs</a></li>
+					  </ul>
+
+<!-- 					  <ul class="nav pull-right">
+					   <li class="divider-vertical"></li>
+						<form class="navbar-search" action="">
+							<input type="text" class="search-query span2" placeholder="Search">
+							<button class="btn btn-small search_btn" type="submit">Go</button>
+						</form>
+					  </ul> -->
+					</div><!-- /nav-collapse -->
+				</div><!-- /navbar-inner -->
+			</div><!-- /navbar -->
+		</div>
+	</div><!-- end nav -->
+
+	<div class="row">
+		<div class="span3"><!-- start sidebar -->
+			<ul class="breadcrumb">
+				<li>Categories</li>
+			</ul>
+			<div class="span3 product_list">
+				<ul class="nav">
+				{% block list_category %}
+				{% for category in categories %}
+				<li><a href="/{{ category.slug }}/">{{ category.title }}</a></li>
+				{% endfor %}
+				{% endblock %}
+				</ul>
+			</div><!-- end sidebar -->
+		</div>
+
+
+
+
+	{% block popular_products %}{% endblock %}
+
+	</div>
+	
+<footer>
+	{% block pagination %}{% endblock %}
+	<hr />
+	<div class="row well no_margin_left">
+	<div class="span4">
+		<h4>Information</h4>
+		<ul>
+			<li><a href="two-column.html">About Us</a></li>
+			<li><a href="typography.html">Delivery Information</a></li>
+			<li><a href="typography.html">Privacy Policy</a></li>
+			<li><a href="typography.html">Terms &amp; Conditions</a></li>
+		</ul>
+	</div>
+	<div class="span4">
+		<h4>Customer Service</h4>
+		<ul>
+			<li><a href="contact.html">Contact Us</a></li>
+			<li><a href="typography.html">Returns</a></li>
+			<li><a href="typography.html">Site Map</a></li>
+		</ul>
+	</div>
+	<div class="span3">
+		<h4>Extras</h4>
+		<ul>
+			<li><a href="typography.html">Brands</a></li>
+			<li><a href="typography.html">Gift Vouchers</a></li>
+			<li><a href="typography.html">Affiliates</a></li>
+			<li><a href="typography.html">Specials</a></li>
+		</ul>
+	</div>
+	</div>
+</footer>
+
+</div> <!-- /container -->
+
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/jquery.rating.pack.js"></script>
+<script src="/static/bootstrap/js/bootstrap.js"></script>
+
+</body>
+</html>
