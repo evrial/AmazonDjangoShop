@@ -6,13 +6,14 @@ from amazon import fetch_category
 from models import Category, Product, StaticPage
 
 categories = Category.objects.filter(visible=True).order_by('title')
+noimage = 'http://placehold.it/150x150'
 
 def home(request):
     entries = Product.objects.filter(category__visible=True).order_by('popularity')[:12]
     return render_to_response('shop/index.html', {
     	'products': entries,
     	'categories': categories,
-        'noimage': 'http://placehold.it/150x150',
+        'noimage': noimage,
     	}, context_instance=RequestContext(request))
 
 def category_view(request, slug):
@@ -37,6 +38,7 @@ def category_view(request, slug):
         'products': products,
         'categories': categories,
         'category': category,
+        'noimage': noimage,
         }, context_instance=RequestContext(request))
 
 def product_page(request, cat_slug, asin):

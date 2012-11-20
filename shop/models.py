@@ -73,15 +73,18 @@ class Category(models.Model):
 
 class Product(models.Model):
     category = models.ForeignKey(Category)
+    detailpageurl = models.TextField(blank=True, null=True)
     asin = models.CharField(max_length=10, primary_key=True,
         help_text="Amazon Standard Identification Number, which is an alphanumeric token assigned by Amazon to an item that uniquely identifies it.")
     title = models.CharField(max_length=255, null=True)
     description = models.TextField(blank=True, null=True)
     price = models.CharField(max_length=30, null=True)
+    publisher = models.CharField(max_length=255, null=True)
+    manufacturer = models.CharField(max_length=255, null=True)
+    brand = models.CharField(max_length=255, null=True)
     medium_image = models.CharField(max_length=255, null=True)
     large_image = models.CharField(max_length=255, null=True)
     popularity = models.IntegerField(null=True)
-    manufacturer = models.CharField(max_length=255, null=True)
 
     def __unicode__(self):
         return self.title

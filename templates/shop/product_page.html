@@ -9,8 +9,7 @@
     <li>
     <a href="/{{ product.category.slug }}/">{{ product.category.title }}</a> <span class="divider">/</span>
     </li>
-    <li class="active">
-    <a href="/{{ product.category.slug }}/{{ product.asin }}">{{ product.title|truncatechars:60 }}</a>
+    <li class="active">{{ product.title|truncatechars:60 }}</a>
     </li>
     </ul>
   
@@ -31,10 +30,10 @@
     
     <div class="span6">
       <address>
-        <strong>Brand:</strong> <span>Apple</span><br />
-        <strong>Product Code:</strong> <span>Product 14</span><br />
-        <strong>Reward Points:</strong> <span>0</span><br />
-        <strong>Availability:</strong> <span>Out Of Stock</span><br />
+        {% if product.brand %}<strong>Brand:</strong> <span>{{ product.brand }}</span><br />{% endif %}
+        {% if product.manufacturer %}<strong>Manufacturer:</strong> <span>{{ product.manufacturer }}</span><br />{% endif %}
+        {% if product.publisher %}<strong>Publisher:</strong> <span>{{ product.publisher }}</span><br /><br />{% endif %}
+        {% if product.detailpageurl %}<a target="_blank" href="{{ product.detailpageurl }}">Amazon Detail Page</a>{% endif %}
       </address>
     </div>  
         
@@ -61,7 +60,7 @@
       </form>
     </div>  
     
-    <div class="span6">
+<!--     <div class="span6">
     
       <p>
       <input name="star1" type="radio" class="star"/>
@@ -71,7 +70,7 @@
 <input name="star1" type="radio" class="star"/>&nbsp;&nbsp;
       
       <a href="#">0 reviews</a>  |  <a href="#">Write a review</a></p>
-    </div>  
+    </div>   -->
     
     
     </div>  
@@ -94,47 +93,8 @@
     <div class="tab-pane" id="2">
     <p>There are no reviews for this product.</p>
     </div>    
-  <div class="tab-pane" id="3">
-        <ul class="thumbnails related_products">
-       
-     <li class="span2">
-          <div class="thumbnail">
-            <a href="product.html"><img alt="" src="http://placehold.it/220x180" /></a>
-            <div class="caption">
-              <a href="product.html"> <h5>iPod Touch</h5></a>  Price: &#36;50.00<br /><br />
-            </div>
-          </div>
-        </li>
-       
-     <li class="span2">
-          <div class="thumbnail">
-            <a href="product.html"><img alt="" src="http://placehold.it/220x180" /></a>
-            <div class="caption">
-              <a href="product.html"> <h5>iPod Touch</h5></a>  Price: &#36;50.00<br /><br />
-            </div>
-          </div>
-        </li>
-       
-     <li class="span2">
-          <div class="thumbnail">
-            <a href="product.html"><img alt="" src="http://placehold.it/220x180" /></a>
-            <div class="caption">
-              <a href="product.html"> <h5>iPod Touch</h5></a>  Price: &#36;50.00<br /><br />
-            </div>
-          </div>
-        </li>
-       
-     <li class="span2">
-          <div class="thumbnail">
-            <a href="product.html"><img alt="" src="http://placehold.it/220x180" /></a>
-            <div class="caption">
-              <a href="product.html"> <h5>iPod Touch</h5></a>  Price: &#36;50.00<br /><br />
-            </div>
-          </div>
-        </li>
-
-
-      </ul>
+    <div class="tab-pane" id="3">
+    <p>Coming soon.</p>
     </div>
     </div>
     </div>
