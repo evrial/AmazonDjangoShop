@@ -1,8 +1,8 @@
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from django.shortcuts import render_to_response, get_object_or_404
+from django.shortcuts import render_to_response, get_object_or_404, redirect
 from django.template import RequestContext
 
-from amazon import fetch_category
+from amazon import fetch_category, create_cart
 from models import Category, Product, StaticPage
 
 categories = Category.objects.filter(visible=True).order_by('title')
@@ -45,11 +45,14 @@ def product_page(request, cat_slug, asin):
     product = get_object_or_404(Product, asin=asin, category__slug=cat_slug,
         category__visible=True)
 
+    if request.GET.get('addtocart'):
+        quantity = request.GET.get('addtocart')
+        return redirect(create_cart(asin, quantity))
+
     return render_to_response('shop/product_page.html',{
         'product': product,
         'categories': categories,
         }, context_instance=RequestContext(request))
-
 
 def static_page(request, slug):
     page = get_object_or_404(StaticPage, visible=True, slug=slug)

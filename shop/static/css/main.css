@@ -13,7 +13,6 @@ height: 90px;
 .product_list {
 	margin-top: -5px;
 	margin-left: 5px;
-	min-height: 500px;
 }
 .product_list ul {
 	list-style: none;
@@ -80,13 +79,6 @@ text-align:center;
 margin-top:1px;
 }
 
-.carousel-inner {
-    height: 286px;
-}
-.carousel-caption {
-bottom: -77px;
-}
-
 .popular_products .span2{
 width:160px;
 }
@@ -101,6 +93,12 @@ font-size:13px;
 text-align:center;
 }
 
-/*.thumbnail img {height: 60% !important;} */
-.thumbnail {height: 240px !important; text-align: center !important;} 
-/*.thumbnails > li {margin-bottom:0px !important; }*/
+.pagination {
+font-weight: bold;
+font-size: 16px;
+}
+
+.thumbnail {
+height: 240px !important;
+text-align: center !important;
+} 

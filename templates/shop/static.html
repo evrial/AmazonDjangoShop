@@ -1,20 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "shop/base.html" %}
 
-<head>
-    <meta charset="utf-8" />
-    <title>{{ page.title }} | My awesome shop</title>
-</head>
+{% block title %}{{ page.title }}{% endblock %}
 
-<body>
-
-<div class="container">
-<h1>{{ page.title }}</h1>
-  <div class="page">
-    {{ page.text|linebreaks }}
-  </div>
+{% block popular_products %}
+<div class="span9 popular_products">
+  <h3>{{ page.title }}</h3>
+  <p>{{ page.text|safe }}</p>
 </div>
-
-</body>
-
-</html>
+{% endblock %}

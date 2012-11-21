@@ -4,8 +4,8 @@
 
 {% block popular_products %}
 <div class="span9 popular_products">
-  <h3>Popular products in category: {{ category.title }}</h3><br />
-  {% if category.description %}<p class="lead">{{ category.description }}</p>
+  <h3>Popular products in category: {{ category.title }}</h3>
+  {% if category.description %}<p>{{ category.description }}</p>
   <hr />
   {% endif %}
   <ul class="thumbnails">
@@ -21,7 +21,7 @@
         </a>
         <span class="label label-info price">
         {% if product.price %}{{ product.price }}{% endif %}</span>
-        <a class="btn btn-small" href="#" rel="8">Add to <i class="icon-shopping-cart"></i></a>
+        <a class="btn btn-small" href="/{{ product.category.slug }}/{{ product.asin }}/?addtocart=1" target="_blank">Add to <i class="icon-shopping-cart"></i></a>
       </div>
       </div>
     </li>

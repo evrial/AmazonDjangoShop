@@ -9,7 +9,7 @@
     <li>
     <a href="/{{ product.category.slug }}/">{{ product.category.title }}</a> <span class="divider">/</span>
     </li>
-    <li class="active">{{ product.title|truncatechars:60 }}</a>
+    <li class="active">{{ product.title|truncatechars:55 }}</a>
     </li>
     </ul>
   
@@ -30,9 +30,17 @@
     
     <div class="span6">
       <address>
-        {% if product.brand %}<strong>Brand:</strong> <span>{{ product.brand }}</span><br />{% endif %}
-        {% if product.manufacturer %}<strong>Manufacturer:</strong> <span>{{ product.manufacturer }}</span><br />{% endif %}
-        {% if product.publisher %}<strong>Publisher:</strong> <span>{{ product.publisher }}</span><br /><br />{% endif %}
+        {% if product.brand %}
+        <strong>Brand:</strong> <span>{{ product.brand }}</span><br />
+        {% endif %}
+        
+        {% if product.manufacturer %}
+        <strong>Manufacturer:</strong> <span>{{ product.manufacturer }}</span><br />
+        {% endif %}
+        
+        {% if product.publisher %}<strong>Publisher:</strong> <span>{{ product.publisher }}</span><br /><br />
+        {% endif %}
+        
         {% if product.detailpageurl %}<a target="_blank" href="{{ product.detailpageurl }}">Amazon Detail Page</a>{% endif %}
       </address>
     </div>  
@@ -44,35 +52,18 @@
     </div>  
     
     <div class="span6">
-      <form class="form-inline">
-        <div class="span3 no_margin_left">
+      <form class="form-inline" method="GET">
+        <div class="span4 no_margin_left">
           <label>Qty:</label>
-          <input type="text" class="span1" placeholder="1">
-          <button class="btn btn-primary" type="submit">Add to cart</button>
-        </div>  
-        <div class="span1">
-        - OR -
+          <input type="text" class="span1" value="1" name="addtocart">
+          <button class="btn btn-primary" type="submit"><b>Add to cart</b> @Amazon</button>
         </div>  
         <div class="span2">
           <p><a href="#">Add to Wish List</a></p>
-          <p><a href="compare.html">Add to Compare</a></p>
+          <p><a href="#">Add to Compare</a></p>
         </div>  
       </form>
-    </div>  
-    
-<!--     <div class="span6">
-    
-      <p>
-      <input name="star1" type="radio" class="star"/>
-<input name="star1" type="radio" class="star"/>
-<input name="star1" type="radio" class="star"/>
-<input name="star1" type="radio" class="star"/>
-<input name="star1" type="radio" class="star"/>&nbsp;&nbsp;
-      
-      <a href="#">0 reviews</a>  |  <a href="#">Write a review</a></p>
-    </div>   -->
-    
-    
+    </div>
     </div>  
 
 
@@ -106,38 +97,3 @@
    
     </div>
 {% endblock %}
-
-
-
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8" />
-    <title>{{ product.title }} | My awesome shop</title>
-</head>
-
-<body>
-<a href="/admin/">Admin</a>
-<div class="container">
-  <h2><a href="/">Home</a> / <a href="/{{ product.category.slug }}/">{{ product.category }}</a></h2>
-<h1>{{ product.title }}</h1>
-  <div class="product">
-    <ul>
-      <img src="{{ product.large_image }}">
-      <li>ASIN: {{ product.asin }}</li>
-      <li>Description: {{ product.description|safe }}</li>
-      <li>Price: {{ product.price }}</li>
-      <li>Popularity: {{ product.popularity }}</li>
-    </ul>
-  </div>
-</div>
-
-</body>
-
-</html> -->

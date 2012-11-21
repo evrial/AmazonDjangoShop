@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<title>{% block title %}Bootstrap Shopping Cart{% endblock %}</title>
+<title>{% block title %}Amazon Django Shop{% endblock %}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="">
@@ -32,7 +32,7 @@
 				<div class="links pull-right">
 					<a href="/">Home</a> |
 					<a href="/admin/">Admin</a> |
-					<a href="cart.html">Shopping Cart</a> |
+					<!-- <a href="#">Shopping Cart</a> | -->
 					<a href="/page/about/">About</a> |
 					<a href="/page/contact/">Contact</a>
 				</div>
@@ -105,9 +105,6 @@
 			</div><!-- end sidebar -->
 		</div>
 
-
-
-
 	{% block popular_products %}{% endblock %}
 
 	</div>
@@ -119,27 +116,27 @@
 	<div class="span4">
 		<h4>Information</h4>
 		<ul>
-			<li><a href="two-column.html">About Us</a></li>
-			<li><a href="typography.html">Delivery Information</a></li>
-			<li><a href="typography.html">Privacy Policy</a></li>
-			<li><a href="typography.html">Terms &amp; Conditions</a></li>
+			<li><a href="#">About Us</a></li>
+			<li><a href="#">Delivery Information</a></li>
+			<li><a href="#">Privacy Policy</a></li>
+			<li><a href="#">Terms &amp; Conditions</a></li>
 		</ul>
 	</div>
 	<div class="span4">
 		<h4>Customer Service</h4>
 		<ul>
-			<li><a href="contact.html">Contact Us</a></li>
-			<li><a href="typography.html">Returns</a></li>
-			<li><a href="typography.html">Site Map</a></li>
+			<li><a href="/page/contact/">Contact Us</a></li>
+			<li><a href="#">Returns</a></li>
+			<li><a href="#">Site Map</a></li>
 		</ul>
 	</div>
 	<div class="span3">
 		<h4>Extras</h4>
 		<ul>
-			<li><a href="typography.html">Brands</a></li>
-			<li><a href="typography.html">Gift Vouchers</a></li>
-			<li><a href="typography.html">Affiliates</a></li>
-			<li><a href="typography.html">Specials</a></li>
+			<li><a href="#">Brands</a></li>
+			<li><a href="#">Gift Vouchers</a></li>
+			<li><a href="#">Affiliates</a></li>
+			<li><a href="#">Specials</a></li>
 		</ul>
 	</div>
 	</div>
@@ -152,7 +149,6 @@
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="/static/js/jquery.min.js"></script>
-<script src="/static/js/jquery.rating.pack.js"></script>
 <script src="/static/bootstrap/js/bootstrap.js"></script>
 
 </body>

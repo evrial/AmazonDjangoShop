@@ -1,7 +1,8 @@
 import caching
 
-from models import Category, Product
+from amazonproduct.api import API
 from amazonproduct.errors import AWSError
+from models import Category, Product
 
 # Amazon Product Advertising API
 AWS_KEY = 'AKIAJXBYRCZ7AKW6USBA'
@@ -29,8 +30,10 @@ def fetch_category(search_index, amazon_node_id):
                     g.popularity = 1000
                 
                 try:
-                    if hasattr(p.ItemAttributes, 'ListPrice'):
-                        g.price = unicode(p.ItemAttributes.ListPrice.FormattedPrice)
+                    if hasattr(p.Offers.Offer.OfferListing, 'Price'):
+                        g.price = p.Offers.Offer.OfferListing.Price.FormattedPrice
+                    elif hasattr(p.ItemAttributes, 'ListPrice'):
+                        g.price = p.ItemAttributes.ListPrice.FormattedPrice
                     elif hasattr(p.OfferSummary, 'LowestUsedPrice'):
                         g.price =  u'used from %s' % p.OfferSummary.LowestUsedPrice.FormattedPrice
                 except:
@@ -67,3 +70,9 @@ def fetch_category(search_index, amazon_node_id):
     except AWSError, e:
         if e.code == 'AWS.ParameterOutOfRange':
             pass
+
+def create_cart(asin, quantity=1):
+    api = API(AWS_KEY, SECRET_KEY, 'us', ASSOCIATE_TAG)
+    cart = api.cart_create({asin: quantity})
+
+    return unicode(cart.Cart.PurchaseURL)
