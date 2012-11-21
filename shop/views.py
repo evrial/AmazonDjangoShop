@@ -5,10 +5,10 @@ from django.template import RequestContext
 from amazon import fetch_category, create_cart
 from models import Category, Product, StaticPage
 
-categories = Category.objects.filter(visible=True).order_by('title')
 noimage = 'http://placehold.it/150x150'
 
 def home(request):
+    categories = Category.objects.filter(visible=True).order_by('title')
     entries = Product.objects.filter(category__visible=True).order_by('popularity')[:12]
     return render_to_response('shop/index.html', {
     	'products': entries,
@@ -17,6 +17,7 @@ def home(request):
     	}, context_instance=RequestContext(request))
 
 def category_view(request, slug):
+    categories = Category.objects.filter(visible=True).order_by('title')
     category = Category.objects.get(slug=slug)
     fetch_category(category.get_search_index_display(), category.amazon_node_id)
 
@@ -42,6 +43,7 @@ def category_view(request, slug):
         }, context_instance=RequestContext(request))
 
 def product_page(request, cat_slug, asin):
+    categories = Category.objects.filter(visible=True).order_by('title')
     product = get_object_or_404(Product, asin=asin, category__slug=cat_slug,
         category__visible=True)
 
@@ -55,6 +57,7 @@ def product_page(request, cat_slug, asin):
         }, context_instance=RequestContext(request))
 
 def static_page(request, slug):
+    categories = Category.objects.filter(visible=True).order_by('title')
     page = get_object_or_404(StaticPage, visible=True, slug=slug)
     return render_to_response('shop/static.html', {
     	'page': page,

@@ -19,9 +19,9 @@
         <a href="/{{ product.category.slug }}/{{ product.asin }}/" title="{{ product.title }}">
           <h6>{{ product.title|truncatechars:20 }}</h6>
         </a>
-        <span class="label label-info price">
-        {% if product.price %}{{ product.price }}{% endif %}</span>
-        <a class="btn btn-small" href="/{{ product.category.slug }}/{{ product.asin }}/?addtocart=1" target="_blank">Add to <i class="icon-shopping-cart"></i></a>
+        <a class="btn btn-mini" href="/{{ product.category.slug }}/{{ product.asin }}/?addtocart=1" target="_blank">Add to <i class="icon-shopping-cart"></i></a> <span class="label label-info price">
+        {% if product.price %}{{ product.price }}{% endif %}
+      </span>
       </div>
       </div>
     </li>
