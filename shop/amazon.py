@@ -1,6 +1,6 @@
-import AmazonDjangoShop.settings as settings
 import caching
 
+from django.conf import settings
 from django.core.exceptions import ValidationError
 from amazonproduct.api import API
 from amazonproduct.errors import AWSError
@@ -17,7 +17,7 @@ def fetch_category(search_index, amazon_node_id):
 
     try:
         for root in api.item_search(search_index, BrowseNode=str(amazon_node_id),
-            ResponseGroup='EditorialReview,Images,ItemAttributes,ItemIds,Offers,Reviews,SalesRank'):
+            ResponseGroup=settings.AMAZON_RESPONSE_GROUP):
 
             for item in root.Items.Item:
                 product = Product()
@@ -49,7 +49,7 @@ def fetch_category(search_index, amazon_node_id):
         if e.code == 'AWS.ParameterOutOfRange':
             pass # reached the api limit of 10 pages
         else:
-            raise ValidationError(message=e)
+            raise ValidationError(message=e.msg)
 
 def create_cart(asin, quantity=1):
     api = API(
@@ -59,4 +59,7 @@ def create_cart(asin, quantity=1):
         settings.AMAZON_ASSOCIATE_TAG)
     cart = api.cart_create({asin: quantity})
 
-    return unicode(cart.Cart.PurchaseURL)
+    try:
+        return unicode(cart.Cart.PurchaseURL)
+    except ValueError, InvalidCartItem:
+        raise ValidationError()

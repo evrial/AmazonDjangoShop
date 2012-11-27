@@ -5,24 +5,22 @@
 {% block popular_products %}
 <div class="span9 popular_products">
   <h3>Popular products in category: {{ category.title }}</h3>
-  {% if category.description %}<p>{{ category.description }}</p>
-  <hr />
+  {% if category.description %}
+    <p>{{ category.description }}</p>
+    <hr />
   {% endif %}
   <ul class="thumbnails">
     {% for product in products %}
     <li class="span2">
       <div class="thumbnail">
-      <a href="/{{ product.category.slug }}/{{ product.asin }}/" title="{{ product.title }}">
-        <img alt="{{ product.title }}" src="{% firstof product.medium_image noimage %}" />
-      </a>
-      <div class="caption">
-        <a href="/{{ product.category.slug }}/{{ product.asin }}/" title="{{ product.title }}">
-          <h6>{{ product.title|truncatechars:20 }}</h6>
-        </a>
-        <a class="btn btn-mini" href="/{{ product.category.slug }}/{{ product.asin }}/?addtocart=1" target="_blank">Add to <i class="icon-shopping-cart"></i></a> <span class="label label-info price">
-        {% if product.price %}{{ product.price }}{% endif %}
-      </span>
-      </div>
+        <div class="caption">
+          <a href="{{ product.get_absolute_url }}" title="{{ product.title }}">
+            <img alt="{{ product.title }}" src="{% firstof product.medium_image noimage %}" />
+            <h6>{{ product.title|truncatechars:20 }}</h6>
+          </a>
+          <a class="btn btn-mini" href="{{ product.get_absolute_url }}?addtocart=1" target="_blank">Add to <i class="icon-shopping-cart"></i></a>
+          <span class="label label-info price">{{ product.price }}</span>
+        </div>
       </div>
     </li>
     {% endfor %}

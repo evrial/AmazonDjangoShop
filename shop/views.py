@@ -9,7 +9,7 @@ noimage = 'http://placehold.it/150x150'
 
 def home(request):
     categories = Category.objects.filter(visible=True).order_by('title')
-    entries = Product.objects.filter(category__visible=True).order_by('popularity')[:12]
+    entries = Product.objects.select_related().filter(category__visible=True).order_by('popularity')[:12]
     return render_to_response('shop/index.html', {
     	'products': entries,
     	'categories': categories,
@@ -21,7 +21,8 @@ def category_view(request, slug):
     category = Category.objects.get(slug=slug)
     fetch_category(category.get_search_index_display(), category.amazon_node_id)
 
-    product_entries = Product.objects.filter(category__slug=slug,
+    product_entries = Product.objects.select_related().filter(
+        category__slug=slug,
         category__visible=True).order_by('popularity') #[:20]
     paginator = Paginator(product_entries, 20)
 
@@ -43,13 +44,13 @@ def category_view(request, slug):
         }, context_instance=RequestContext(request))
 
 def product_page(request, cat_slug, asin):
+    quantity = request.GET.get('addtocart')
+    if quantity and quantity.isdigit():
+        return redirect(create_cart(asin, quantity))
+
     categories = Category.objects.filter(visible=True).order_by('title')
     product = get_object_or_404(Product, asin=asin, category__slug=cat_slug,
         category__visible=True)
-
-    if request.GET.get('addtocart'):
-        quantity = request.GET.get('addtocart')
-        return redirect(create_cart(asin, quantity))
 
     return render_to_response('shop/product_page.html',{
         'product': product,
@@ -59,7 +60,7 @@ def product_page(request, cat_slug, asin):
 def static_page(request, slug):
     categories = Category.objects.filter(visible=True).order_by('title')
     page = get_object_or_404(StaticPage, visible=True, slug=slug)
-    return render_to_response('shop/static.html', {
+    return render_to_response('shop/static_page.html', {
     	'page': page,
         'categories': categories,
     	}, context_instance=RequestContext(request))

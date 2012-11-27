@@ -2,98 +2,93 @@
 
 {% block popular_products %}
 <div class="span9">
-         <ul class="breadcrumb">
-    <li>
-    <a href="#">Home</a> <span class="divider">/</span>
+<ul class="breadcrumb">
+  <li>
+    <a href="#">Home</a> 
+    <span class="divider">/</span>
     </li>
-    <li>
-    <a href="/{{ product.category.slug }}/">{{ product.category.title }}</a> <span class="divider">/</span>
-    </li>
-    <li class="active">{{ product.title|truncatechars:55 }}</a>
-    </li>
-    </ul>
-  
-  
-   <div class="row">
-     <div class="span9">
-      <h1>{{ product.title }}</h1>
-     </div>
+  <li>
+    <a href="{{ product.category.get_absolute_url }}">{{ product.category.title|truncatechars:55 }}</a> 
+    <span class="divider">/</span>
+  </li>
+  <li class="active">
+    {{ product.title|truncatechars:55 }}
+  </li>
+</ul>
+
+
+<div class="row">
+  <div class="span9">
+    <h1>{{ product.title }}</h1>
   </div>
-   <hr>
-  
-   <div class="row">
-     <div class="span3">
+</div>
+<hr>
+
+ <div class="row">
+    <div class="span3">
       <img alt="" src="{{ product.large_image }}" />
     </div>   
-    
-    <div class="span6">
-    
-    <div class="span6">
-      <aside>
+  
+  <div class="span6">
+  
+  <div class="span6">
+    <aside>
+      <dl>
         {% if product.brand %}
-        <strong>Brand:</strong> <span>{{ product.brand }}</span><br />
+        <dt>Brand</dt><dd>{{ product.brand }}</dd>
         {% endif %}
-        
         {% if product.manufacturer %}
-        <strong>Manufacturer:</strong> <span>{{ product.manufacturer }}</span><br />
+        <dt>Manufacturer</dt><dd>{{ product.manufacturer }}</dd>
         {% endif %}
-        
-        {% if product.publisher %}<strong>Publisher:</strong> <span>{{ product.publisher }}</span><br /><br />
+        {% if product.publisher %}
+        <dt>Publisher</dt><dd>{{ product.publisher }}</dd>
         {% endif %}
-        
-        {% if product.detailpageurl %}<a target="_blank" href="{{ product.detailpageurl }}">Amazon Detail Page</a>{% endif %}
-      </aside>
-    </div>  
-        
-    <div class="span6">
-      <h2>
-        <strong>Price: {{ product.price }}</strong><br /><br />
-      </h2>
-    </div>  
-    
-    <div class="span6">
-      <form class="form-inline" method="GET">
-        <div class="span4 no_margin_left">
-          <label>Qty:</label>
-          <input type="text" class="span1" value="1" name="addtocart">
-          <button class="btn btn-primary" type="submit"><b>Add to cart</b> @Amazon</button>
-        </div>  
-        <div class="span2">
-          <p><a href="#">Add to Wish List</a></p>
-          <p><a href="#">Add to Compare</a></p>
-        </div>  
-      </form>
-    </div>
-    </div>  
-
-
+        <h2><dt>Price</dt><dd>{{ product.price }}</dd></h2>
+      </dl>
+      <a target="_blank" href="{{ product.detailpageurl }}">Amazon Detail Page</a><br /><br />
+    </aside>
+  </div>  
+  
+  <div class="span6">
+    <form class="form-inline" method="GET">
+      <div class="span4 no_margin_left">
+        <label>Qty:</label>
+        <input type="text" class="span1" value="1" name="addtocart">
+        <button class="btn btn-primary" type="submit"><b>Add to cart</b> @Amazon</button>
+      </div>  
+      <div class="span2">
+        <p><a href="#">Add to Wish List</a></p>
+        <p><a href="#">Add to Compare</a></p>
+      </div>  
+    </form>
   </div>
-   <hr>
-    <div class="row">
-    <div class="span9">
-    <div class="tabbable">
-    <ul class="nav nav-tabs">
-    <li class="active"><a href="#1" data-toggle="tab">Description</a></li>
-    <li><a href="#2" data-toggle="tab">Reviews</a></li>
-    <li><a href="#3" data-toggle="tab">Related products</a></li>
-    </ul>
-    <div class="tab-content">
-    <div class="tab-pane active" id="1">
-    <p>{{ product.description|safe }}</p>
-    </div>
-    <div class="tab-pane" id="2">
-    <p>There are no reviews for this product.</p>
-    </div>    
-    <div class="tab-pane" id="3">
-    <p>Coming soon.</p>
-    </div>
-    </div>
-    </div>
+  </div>  
+</div>
 
+<hr />
+
+<div class="row">
+  <div class="span9">
+    <div class="tabbable">
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#1" data-toggle="tab">Description</a></li>
+        <li><a href="#2" data-toggle="tab">Reviews</a></li>
+        <li><a href="#3" data-toggle="tab">Related products</a></li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane active" id="1">
+          <p>{{ product.description|safe }}</p>
+        </div>
+        <div class="tab-pane" id="2">
+          <p>There are no reviews for this product.</p>
+        </div>    
+        <div class="tab-pane" id="3">
+          <p>Coming soon.</p>
+        </div>
+      </div>
     </div>
-    </div>
-   
-   
-   
-    </div>
+  </div>
+</div>
+
+</div>
 {% endblock %}

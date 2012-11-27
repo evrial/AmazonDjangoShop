@@ -22,8 +22,14 @@ class Category(models.Model):
     modified = models.DateTimeField(auto_now=True)
     visible = models.BooleanField(default=True)
 
+    def get_absolute_url(self):
+        return "/%s/" % self.slug
+
     def __unicode__(self):
         return self.title
+
+    class Meta:
+        verbose_name_plural = "categories"
 
 class Product(models.Model):
     category = models.ForeignKey(Category)
@@ -39,6 +45,9 @@ class Product(models.Model):
     large_image = models.CharField(max_length=255, null=True)
     popularity = models.IntegerField(null=True)
 
+    def get_absolute_url(self):
+        return "/%s/%s/" % (self.category.slug, self.asin)
+
     def __unicode__(self):
         return self.title
 
@@ -50,6 +59,9 @@ class StaticPage(models.Model):
     slug = models.SlugField(max_length=50, help_text=slug_help_text)
     text = models.TextField()
     visible = models.BooleanField(default=True)
+
+    def get_absolute_url(self):
+        return "/page/%s/" % self.slug
 
     def __unicode__(self):
         return self.title
