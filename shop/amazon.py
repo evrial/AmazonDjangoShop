@@ -28,13 +28,13 @@ def fetch_category(search_index, amazon_node_id):
                 product.manufacturer = unicode(getattr(item.ItemAttributes, 'Manufacturer', None))
                 product.publisher = unicode(getattr(item.ItemAttributes, 'Publisher', None))
                 product.brand = unicode(getattr(item.ItemAttributes, 'Brand', None))
-                product.medium_image = getattr(item.MediumImage, 'URL', None)
-                product.large_image = getattr(item.LargeImage, 'URL', None)
                 product.popularity = getattr(item, 'SalesRank', 1000)
-
+                if hasattr(item, 'MediumImage'):
+                    product.medium_image = getattr(item.MediumImage, 'URL', None)
+                if hasattr(item, 'LargeImage'):
+                    product.large_image = getattr(item.LargeImage, 'URL', None)
                 if hasattr(item, 'EditorialReviews'):
                     product.description = unicode(getattr(item.EditorialReviews.EditorialReview, 'Content', None))
-
                 if hasattr(item.Offers, 'Offer'):
                     product.price = item.Offers.Offer.OfferListing.Price.FormattedPrice.pyval
                 elif hasattr(item.ItemAttributes, 'ListPrice'):
