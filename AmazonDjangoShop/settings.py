@@ -1,8 +1,15 @@
 # Django settings for AmazonDjangoShop project.
 from os import path
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+
+# Amazon Product Advertising API credentials
+AMAZON_AWS_KEY = 'AKIAJXBYRCZ7AKW6USBA'
+AMAZON_SECRET_KEY = '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'
+AMAZON_API_LOCALE = 'us'
+AMAZON_ASSOCIATE_TAG = 'onlinshop0b-20'
+
 
 ADMINS = (
     ('Alexander', 'evrial@gmail.com'),

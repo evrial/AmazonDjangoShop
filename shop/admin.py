@@ -6,20 +6,17 @@ class CategoryAdmin(admin.ModelAdmin):
     date_hierarchy = 'created'
     prepopulated_fields = {'slug': ('title',)}
     list_display = ('title', 'amazon_node_id', 'created', 'modified', 'visible')
-    list_display_links = ('title',)
     list_editable = ('visible',)
     list_filter = ('title', 'created', 'modified')
     search_fields = ['title', 'description', 'amazon_node_id']
 
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('category', 'title', 'asin', 'price', 'popularity')
-    list_display_links = ('title',)
+    list_display = ('title', 'category', 'asin', 'price', 'popularity')
     list_filter = ('category',)
     search_fields = ['title', 'description', 'asin', 'manufacturer']
 
 class StaticAdmin(admin.ModelAdmin):
     list_display = ('title', 'slug', 'visible')
-    list_display_links = ('title',)
     list_editable = ('visible',)
     prepopulated_fields = {'slug': ('title',)}
     search_fields = ['title', 'text']

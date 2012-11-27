@@ -1,5 +1,8 @@
-body {padding-top: 10px;padding-bottom: 40px;}
-.span12, .container {width: 940px;}
+.container {
+	width: 940px;
+	padding-top: 10px;
+	padding-bottom: 40px;
+}
 .no_margin_left {margin-left: 0;}
 footer h4 {margin-bottom: 8px;}
 .logo {
