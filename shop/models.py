@@ -4,6 +4,9 @@ slug_help_text = "A slug is a short label for representing a page in URL. \
 Containing only letters, numbers, underscores or hyphens."
 
 class Category(models.Model):
+    class Meta:
+        verbose_name_plural = "categories"
+
     SEARCH_INDEXES = ('Apparel','Appliances','ArtsAndCrafts','Automotive',\
         'Baby','Beauty','Blended','Books','Classical','Collectibles','DVD',\
         'DigitalMusic','Electronics','GiftCards','GourmetFood','Grocery',\
@@ -13,6 +16,7 @@ class Category(models.Model):
         'OfficeProducts','OutdoorLiving','PCHardware','PetSupplies','Photo',\
         'Shoes','Software','SportingGoods','Tools','Toys','UnboxVideo','VHS',\
         'Video','VideoGames','Watches','Wireless','WirelessAccessories')
+    
     amazon_node_id = models.IntegerField(primary_key=True, help_text="A positive integer assigned by Amazon that uniquely identifies a product category.<br>For help refer to <a target='_blank' href='https://affiliate-program.amazon.com/gp/associates/help/t41/a6'>this page</a>.")
     search_index = models.IntegerField(choices=tuple(enumerate(sorted(SEARCH_INDEXES))))
     title = models.CharField(max_length=255, null=True)
@@ -27,9 +31,6 @@ class Category(models.Model):
 
     def __unicode__(self):
         return self.title
-
-    class Meta:
-        verbose_name_plural = "categories"
 
 class Product(models.Model):
     category = models.ForeignKey(Category)

@@ -9,7 +9,8 @@ noimage = 'http://placehold.it/150x150'
 
 def home(request):
     categories = Category.objects.filter(visible=True).order_by('title')
-    entries = Product.objects.select_related().filter(category__visible=True).order_by('popularity')[:12]
+    entries = Product.objects.select_related('category').filter(
+        category__visible=True).order_by('popularity')[:12]
     return render_to_response('shop/index.html', {
     	'products': entries,
     	'categories': categories,
@@ -21,7 +22,7 @@ def category_view(request, slug):
     category = Category.objects.get(slug=slug)
     fetch_category(category.get_search_index_display(), category.amazon_node_id)
 
-    product_entries = Product.objects.select_related().filter(
+    product_entries = Product.objects.select_related('category').filter(
         category__slug=slug,
         category__visible=True).order_by('popularity') #[:20]
     paginator = Paginator(product_entries, 20)

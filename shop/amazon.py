@@ -2,9 +2,11 @@ import caching
 
 from django.conf import settings
 from django.core.exceptions import ValidationError
+from models import Category, Product
+
 from amazonproduct.api import API
 from amazonproduct.errors import AWSError
-from models import Category, Product
+
 
 def fetch_category(search_index, amazon_node_id):
     api = caching.ResponseCachingAPI(

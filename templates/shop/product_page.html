@@ -4,11 +4,11 @@
 <div class="span9">
 <ul class="breadcrumb">
   <li>
-    <a href="#">Home</a> 
+    <a href="{% url home %}">Home</a> 
     <span class="divider">/</span>
-    </li>
+  </li>
   <li>
-    <a href="{{ product.category.get_absolute_url }}">{{ product.category.title|truncatechars:55 }}</a> 
+    <a href="{% url category_view product.category.slug %}">{{ product.category.title|truncatechars:55 }}</a> 
     <span class="divider">/</span>
   </li>
   <li class="active">
@@ -20,14 +20,17 @@
 <div class="row">
   <div class="span9">
     <h1>{{ product.title }}</h1>
+    {% if product.publisher %}
+        by {{ product.publisher }}
+    {% endif %}
   </div>
 </div>
-<hr>
+<hr />
 
- <div class="row">
-    <div class="span3">
-      <img alt="" src="{{ product.large_image }}" />
-    </div>   
+<div class="row">
+  <div class="span3">
+    <img alt="" src="{{ product.large_image }}" />
+  </div>   
   
   <div class="span6">
   
@@ -40,12 +43,8 @@
         {% if product.manufacturer %}
         <dt>Manufacturer</dt><dd>{{ product.manufacturer }}</dd>
         {% endif %}
-        {% if product.publisher %}
-        <dt>Publisher</dt><dd>{{ product.publisher }}</dd>
-        {% endif %}
         <h2><dt>Price</dt><dd>{{ product.price }}</dd></h2>
       </dl>
-      <a target="_blank" href="{{ product.detailpageurl }}">Amazon Detail Page</a><br /><br />
     </aside>
   </div>  
   
@@ -55,6 +54,7 @@
         <label>Qty:</label>
         <input type="text" class="span1" value="1" name="addtocart">
         <button class="btn btn-primary" type="submit"><b>Add to cart</b> @Amazon</button>
+        <br /><br /><a target="_blank" href="{{ product.detailpageurl }}">Amazon Detail Page</a>
       </div>  
       <div class="span2">
         <p><a href="#">Add to Wish List</a></p>
@@ -62,9 +62,9 @@
       </div>  
     </form>
   </div>
-  </div>  
-</div>
+  </div>
 
+</div>
 <hr />
 
 <div class="row">

@@ -1,4 +1,4 @@
-!
+/*
  * Bootstrap v2.2.1
  *
  * Copyright 2012 Twitter, Inc
@@ -5996,6 +5996,7 @@ text-align:center;
 .pagination {
 font-weight: bold;
 font-size: 16px;
+text-align: center;
 }
 
 .thumbnail {
