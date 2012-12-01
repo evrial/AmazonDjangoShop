@@ -5921,6 +5921,9 @@ height: 90px;
 .product_list > ul > li {
   padding: 8px 8px 8px 0px;
 }
+.product_list > ul > li.active{
+  font-weight: bold;
+}
 .product_list > ul > li + li {
   border-top: 1px solid #EEEEEE;
 }

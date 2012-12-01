@@ -22,29 +22,28 @@
 <body>
 
 <div class="container">
-<header>
-	<div class="row">
-		<div class="span6 logo">
-			<a href="{% url home %}"><h1>Amazon Django Shop</h1></a>
-		</div>
-		<div class="span6">
-			<div class="row" style="padding-bottom:15px;">
-				<div class="links pull-right">
-					<a href="{% url home %}">Home</a> |
-					<a href="/admin/">Admin</a> |
-					<a href="/page/about/">About</a> |
-					<a href="/page/contact/">Contact</a>
-				</div>
+<header class="row">
+	<div class="span6 logo">
+		<a href="{% url home %}"><h1>Amazon Django Shop</h1></a>
+	</div>
+	<div class="span6">
+		<div class="row">
+			<div class="links pull-right">
+				<a href="{% url home %}">Home</a> |
+				<a href="{% url admin:index %}">Admin</a> |
+				<a href="{% url static_page 'about' %}">About us</a> |
+				<a href="{% url static_page 'contact' %}">Contact</a>
 			</div>
 		</div>
 	</div>
 </header>
-	
-<div class="row"><!-- start nav -->
+
+<div class="row">
 	<div class="span12">
 		<div class="navbar">
 			<div class="navbar-inner">
 				<div class="nav-collapse">
+				<nav>
 				  <ul class="nav">
 					<li class="dropdown">
 					  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Desktops <b class="caret"></b></a>
@@ -75,39 +74,41 @@
 					</li>
 					<li><a href="#">Phones &amp; PDAs</a></li>
 				  </ul>
-
-				  <ul class="nav pull-right">
+				</nav>
+				<ul class="nav pull-right">
 				  	<li class="divider-vertical"></li>
-					<form class="navbar-search" action="">
-						<input type="text" class="search-query span2" placeholder="Search">
+					<form class="navbar-search" action="{% url home %}">
+						<input type="text" class="search-query span2" placeholder="Search" name="search">
 						<button class="btn btn-small search_btn" type="submit">Go</button>
 					</form>
-				  </ul>
+				</ul>
 				</div><!-- /nav-collapse -->
 			</div><!-- /navbar-inner -->
 		</div><!-- /navbar -->
 	</div>
-</div><!-- end nav -->
+</div>
 
-<div class="row">
+<div class="row"><!-- main row -->
 	<div class="span3"><!-- start sidebar -->
 		<ul class="breadcrumb">
 			<li>Categories</li>
 		</ul>
-		<div class="span3 product_list">
+		<nav class="span3 product_list">
 			<ul class="nav">
 			{% block list_category %}
-			{% for category in categories %}
-			<li><a href="{% url category_view category.slug %}">{{ category.title }}</a></li>
+			{% for cat in categories %}
+			<li {% if category.title = cat.title %}class="active"{% endif %}>
+				<a href="{% url category_view cat.slug %}">{{ cat.title|truncatechars:50 }}</a>
+			</li>
 			{% endfor %}
 			{% endblock %}
 			</ul>
-		</div>
+		</nav>
 	</div><!-- end sidebar -->
 
 {% block popular_products %}{% endblock %}
 
-</div>
+</div><!-- /main row -->
 	
 <footer>
 	{% block pagination %}{% endblock %}
@@ -148,7 +149,7 @@
 <!-- Le javascript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="{% static "js/jquery.min.js" %}"></script>
+<script src="{% static "js/jquery-1.8.3.min.js" %}"></script>
 <script src="{% static "bootstrap/js/bootstrap.js" %}"></script>
 
 </body>

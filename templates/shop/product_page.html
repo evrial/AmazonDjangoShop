@@ -34,19 +34,17 @@
   
   <div class="span6">
   
-  <div class="span6">
-    <aside>
-      <dl>
-        {% if product.brand %}
-        <dt>Brand</dt><dd>{{ product.brand }}</dd>
-        {% endif %}
-        {% if product.manufacturer %}
-        <dt>Manufacturer</dt><dd>{{ product.manufacturer }}</dd>
-        {% endif %}
-        <h2><dt>Price</dt><dd>{{ product.price }}</dd></h2>
-      </dl>
-    </aside>
-  </div>  
+  <aside class="span6">
+    <dl>
+      {% if product.brand %}
+      <dt>Brand</dt><dd>{{ product.brand }}</dd>
+      {% endif %}
+      {% if product.manufacturer %}
+      <dt>Manufacturer</dt><dd>{{ product.manufacturer }}</dd>
+      {% endif %}
+      <h2><dt>Price</dt><dd>{{ product.price }}</dd></h2>
+    </dl>
+  </aside>  
   
   <div class="span6">
     <form class="form-inline" method="GET">
