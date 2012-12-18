@@ -1,11 +1,10 @@
-import caching
+from amazonproduct.api import API
+from amazonproduct.contrib import caching
+from amazonproduct.errors import AWSError
 
 from django.conf import settings
 from django.core.exceptions import ValidationError
 from models import Category, Product
-
-from amazonproduct.api import API
-from amazonproduct.errors import AWSError
 
 
 def fetch_category(search_index, amazon_node_id):

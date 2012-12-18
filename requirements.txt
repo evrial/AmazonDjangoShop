@@ -1,4 +1,4 @@
 Django==1.4.2
 South==0.7.6
 lxml==2.3
-python-amazon-product-api==0.2.5
+-e git://github.com/redtoad/python-amazon-product-api.git#egg=python-amazon-product-api-tip
