@@ -12,7 +12,7 @@ AMAZON_ASSOCIATE_TAG = 'onlinshop0b-20'
 AMAZON_RESPONSE_GROUP = 'EditorialReview,Images,ItemAttributes,ItemIds,Offers,Reviews,SalesRank'
 
 ADMINS = (
-    ('Alexander', 'evrial@gmail.com'),
+   # ('Admin', 'yourmail@domain.com'),
 )
 
 MANAGERS = ADMINS
