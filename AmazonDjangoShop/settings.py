@@ -5,10 +5,10 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 # Amazon Product Advertising API credentials
-AMAZON_AWS_KEY = 'AKIAJXBYRCZ7AKW6USBA'
-AMAZON_SECRET_KEY = '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'
+AMAZON_AWS_KEY = ''
+AMAZON_SECRET_KEY = ''
 AMAZON_API_LOCALE = 'us'
-AMAZON_ASSOCIATE_TAG = 'onlinshop0b-20'
+AMAZON_ASSOCIATE_TAG = ''
 AMAZON_RESPONSE_GROUP = 'EditorialReview,Images,ItemAttributes,ItemIds,Offers,Reviews,SalesRank'
 
 ADMINS = (
