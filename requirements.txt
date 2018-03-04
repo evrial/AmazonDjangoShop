@@ -1,4 +1,5 @@
-Django==1.4.2
-South==0.7.6
-lxml==2.3
--e git://github.com/redtoad/python-amazon-product-api.git#egg=python-amazon-product-api-tip
+Django==2.0.2
+gunicorn
+whitenoise
+lxml
+-e git://github.com/redtoad/python-amazon-product-api.git#egg=python-amazon-product-api

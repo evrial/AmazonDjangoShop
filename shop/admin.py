@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from models import Category, Product, StaticPage
+from .models import Category, Product, StaticPage
 
 class CategoryAdmin(admin.ModelAdmin):
     date_hierarchy = 'created'

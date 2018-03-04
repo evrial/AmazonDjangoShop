@@ -14,11 +14,11 @@
     <li class="span2">
       <div class="thumbnail">
         <div class="caption">
-          <a href="{% url product_page product.category.slug product.asin %}" title="{{ product.title }}">
-            <img alt="{{ product.title }}" src="{% firstof product.medium_image noimage %}" />
-            <h6>{{ product.title|truncatechars:20 }}</h6>
+          <a href="{% url 'product_page' product.category.slug product.asin %}" title="{{ product.title }}">
+            <img alt="{{ product.title }}" src="{% firstof product.medium_image 'http://placehold.it/150x150' %}" />
+            <h6>{{ product.title|truncatechars:40 }}</h6>
           </a>
-          <a class="btn btn-mini" href="{% url product_page product.category.slug product.asin %}?addtocart=1" target="_blank">Add to <i class="icon-shopping-cart"></i></a>
+          <a class="btn btn-mini" href="{% url 'product_page' product.category.slug product.asin %}?addtocart=1" target="_blank">Add to <i class="icon-shopping-cart"></i></a>
           <span class="label label-info price">{{ product.price }}</span>
         </div>
       </div>

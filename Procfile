@@ -1,0 +1,1 @@
+web: gunicorn AmazonDjangoShop.wsgi --log-file -

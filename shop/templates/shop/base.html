@@ -8,15 +8,8 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<!-- Le styles -->
 {% load static from staticfiles %}
 <link href="{% static "bootstrap/css/bootstrap.css" %}" rel="stylesheet">
-
-<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
-  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-
 </head>
 
 <body>
@@ -24,15 +17,15 @@
 <div class="container">
 <header class="row">
 	<div class="span6 logo">
-		<a href="{% url home %}"><h1>Amazon Django Shop</h1></a>
+		<a href="{% url 'home' %}"><h1>Amazon Django Shop</h1></a>
 	</div>
 	<div class="span6">
 		<div class="row">
 			<div class="links pull-right">
-				<a href="{% url home %}">Home</a> |
-				<a href="{% url admin:index %}">Admin</a> |
-				<a href="{% url static_page 'about' %}">About us</a> |
-				<a href="{% url static_page 'contact' %}">Contact</a>
+				<a href="{% url 'home' %}">Home</a> |
+				<a href="{% url 'admin:index' %}">Admin</a> |
+				<a href="{% url 'static_page' 'about' %}">About us</a> |
+				<a href="{% url 'static_page' 'contact' %}">Contact</a>
 			</div>
 		</div>
 	</div>
@@ -77,7 +70,7 @@
 				</nav>
 				<ul class="nav pull-right">
 				  	<li class="divider-vertical"></li>
-					<form class="navbar-search" action="{% url home %}">
+					<form class="navbar-search" action="{% url 'home' %}">
 						<input type="text" class="search-query span2" placeholder="Search" name="search">
 						<button class="btn btn-small search_btn" type="submit">Go</button>
 					</form>
@@ -97,8 +90,8 @@
 			<ul class="nav">
 			{% block list_category %}
 			{% for cat in categories %}
-			<li {% if category.title = cat.title %}class="active"{% endif %}>
-				<a href="{% url category_view cat.slug %}">{{ cat.title|truncatechars:50 }}</a>
+			<li {% if category.title == cat.title %}class="active"{% endif %}>
+				<a href="{% url 'category_view' cat.slug %}">{{ cat.title|truncatechars:50 }}</a>
 			</li>
 			{% endfor %}
 			{% endblock %}
@@ -109,7 +102,7 @@
 {% block popular_products %}{% endblock %}
 
 </div><!-- /main row -->
-	
+
 <footer>
 	{% block pagination %}{% endblock %}
 	<hr />
@@ -145,10 +138,8 @@
 
 </div> <!-- /container -->
 
+<a href="https://github.com/evrial/AmazonDjangoShop"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
 
-<!-- Le javascript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
 <script src="{% static "js/jquery-1.8.3.min.js" %}"></script>
 <script src="{% static "bootstrap/js/bootstrap.js" %}"></script>
 

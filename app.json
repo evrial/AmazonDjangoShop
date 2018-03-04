@@ -1,0 +1,16 @@
+{
+  "name": "AmazonDjangoShop",
+  "repository": "https://github.com/evrial/AmazonDjangoShop",
+  "keywords": ["python", "django", "amazon-product-advertising",
+  	"web-application", "heroku", "e-commerce", "demo"],
+  "env": {
+  	"PRODUCTION": {
+  		"description": "Set if running in production, keep blank if in development",
+  		"required": false,
+  		"value": "1"
+  	},
+  	"AMAZON_ACCESS_KEY": {"value": "your access key"},
+  	"AMAZON_SECRET_KEY": {"value": "your secret key"},
+  	"AMAZON_ASSOCIATE_TAG": {"value": "your associate tag"}
+  }
+}

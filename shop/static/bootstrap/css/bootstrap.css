@@ -6005,7 +6005,11 @@ text-align: center;
 .thumbnail {
 height: 240px !important;
 text-align: center !important;
-} 
+}
+
+.thumbnail img {
+  max-height: 145px;
+}
 
 dd,dt {
     display: inline;

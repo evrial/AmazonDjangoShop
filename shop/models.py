@@ -16,7 +16,7 @@ class Category(models.Model):
         'OfficeProducts','OutdoorLiving','PCHardware','PetSupplies','Photo',\
         'Shoes','Software','SportingGoods','Tools','Toys','UnboxVideo','VHS',\
         'Video','VideoGames','Watches','Wireless','WirelessAccessories')
-    
+
     amazon_node_id = models.IntegerField(primary_key=True, help_text="A positive integer assigned by Amazon that uniquely identifies a product category.<br>For help refer to <a target='_blank' href='https://affiliate-program.amazon.com/gp/associates/help/t41/a6'>this page</a>.")
     search_index = models.IntegerField(choices=tuple(enumerate(sorted(SEARCH_INDEXES))))
     title = models.CharField(max_length=255, null=True)
@@ -33,7 +33,7 @@ class Category(models.Model):
         return self.title
 
 class Product(models.Model):
-    category = models.ForeignKey(Category)
+    category = models.ForeignKey(Category, on_delete=models.DO_NOTHING)
     detailpageurl = models.TextField(blank=True, null=True)
     asin = models.CharField(max_length=10, primary_key=True, help_text="Amazon Standard Identification Number, which is an alphanumeric token assigned by Amazon to an item that uniquely identifies it.")
     title = models.CharField(max_length=255, null=True)
