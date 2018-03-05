@@ -9,7 +9,7 @@ Fork and deploy your copy:
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 ## Demo
-[https://amazon-django-shop.herokuapp.com/](https://amazon-django-shop.herokuapp.com/)
+[https://amazon-django-shop.herokuapp.com/](https://amazon-django-shop.herokuapp.com/)  
 Username: `admin`  
 Password: `adminadmin`
 
