@@ -1,0 +1,8 @@
+dist: bionic
+
+language: python
+
+python:
+  - "3.9.0"
+
+install: pip install -r requirements.txt
