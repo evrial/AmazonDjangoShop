@@ -11,6 +11,7 @@ Fork this repo and push the button to deploy your copy:
 
 ## Demo
 https://amazon-django-shop.herokuapp.com/admin/
+
 Username: `admin`  
 Password: `adminadmin`
 
