@@ -27,6 +27,15 @@ DEBUG = True
 if os.environ.get('PRODUCTION'):
     DEBUG = False
 
+# Amazon Product Advertising API credentials
+# https://github.com/redtoad/python-amazon-product-api#basic-usage
+AMAZON_ACCESS_KEY = os.environ.get('AMAZON_ACCESS_KEY')
+AMAZON_SECRET_KEY = os.environ.get('AMAZON_SECRET_KEY')
+AMAZON_ASSOCIATE_TAG = os.environ.get('AMAZON_ASSOCIATE_TAG')
+AMAZON_API_LOCALE = 'us'
+AMAZON_RESPONSE_GROUP = 'EditorialReview,Images,ItemAttributes,ItemIds,Offers,Reviews,SalesRank'
+# ----
+
 ALLOWED_HOSTS = ['*']
 
 
@@ -127,11 +136,3 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
-
-# Amazon Product Advertising API credentials
-# https://github.com/redtoad/python-amazon-product-api#basic-usage
-AMAZON_ACCESS_KEY = os.environ.get('AMAZON_ACCESS_KEY')
-AMAZON_SECRET_KEY = os.environ.get('AMAZON_SECRET_KEY')
-AMAZON_ASSOCIATE_TAG = os.environ.get('AMAZON_ASSOCIATE_TAG')
-AMAZON_API_LOCALE = 'us'
-AMAZON_RESPONSE_GROUP = 'EditorialReview,Images,ItemAttributes,ItemIds,Offers,Reviews,SalesRank'
