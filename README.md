@@ -5,7 +5,7 @@ AmazonDjangoShop
 
 This is a simple Django driven online shop engine using [Amazon Product Advertising API](https://docs.aws.amazon.com/AWSECommerceService/latest/DG/becomingDev.html) as backend database. Running forever for free on Heroku instance with auto deploy from Github.
 
-Fork and deploy your copy:  
+Fork this repo and push the button to deploy your copy:  
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 ## Demo
