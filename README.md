@@ -9,8 +9,10 @@ The API connection is outdated and pip package no longer maintained, so use as l
 Fork this repo and push the button to deploy your copy:  
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-## Demo
-https://amazon-django-shop.herokuapp.com/admin/
+## [Demo](https://amazon-django-shop.herokuapp.com/)
+
+
+[Admin](https://amazon-django-shop.herokuapp.com/admin/)
 
 Username: `admin`  
 Password: `adminadmin`
