@@ -9,6 +9,9 @@ The API connection is outdated and pip package no longer maintained, so use as l
 Fork this repo and push the button to deploy your copy:  
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
+
+[![Deploy to DO](https://mp-assets1.sfo2.digitaloceanspaces.com/deploy-to-do/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/evrial/AmazonDjangoShop/edit/master/)
+
 ## [Demo](https://amazon-django-shop.herokuapp.com/)
 
 
