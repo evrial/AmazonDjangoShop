@@ -2,23 +2,23 @@ spec:
   name: AmazonDjangoShop
   services:
   - name: web
-   git:
-     branch: main
-     repo_clone_url: https://github.com/evrial/AmazonDjangoShop
-   envs:
-   - key: AMAZON_ACCESS_KEY
-     value: "your access key"
-     type: SECRET
-   - key: AMAZON_SECRET_KEY
-     value: "your secret key"
-     type: SECRET
-   - key: AMAZON_ASSOCIATE_TAG
-     value: "your associate tag"
-     type: SECRET
-   - key: PRODUCTION
-     value: "Set if running in production, keep blank if in development"
-   - key: DATABASE_URL
-     scope: RUN_TIME
-     value: ${example-db.DATABASE_URL}
-  databases:
-  - name: example-db
+    git:
+      branch: main
+      repo_clone_url: https://github.com/evrial/AmazonDjangoShop
+    envs:
+    - key: AMAZON_ACCESS_KEY
+      value: "your access key"
+      type: SECRET
+    - key: AMAZON_SECRET_KEY
+      value: "your secret key"
+      type: SECRET
+    - key: AMAZON_ASSOCIATE_TAG
+      value: "your associate tag"
+      type: SECRET
+    - key: PRODUCTION
+      value: "Set if running in production, keep blank if in development"
+    - key: DATABASE_URL
+      scope: RUN_TIME
+      value: ${example-db.DATABASE_URL}
+   databases:
+   - name: example-db
