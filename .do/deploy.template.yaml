@@ -17,8 +17,5 @@ spec:
       type: SECRET
     - key: PRODUCTION
       value: "Set if running in production, keep blank if in development"
-    - key: DATABASE_URL
-      scope: RUN_TIME
-      value: ${example-db.DATABASE_URL}
    databases:
    - name: example-db
