@@ -2,9 +2,10 @@ spec:
   name: AmazonDjangoShop
   services:
   - name: web
-    git:
+    github:
+      repo: evrial/AmazonDjangoShop
       branch: main
-      repo_clone_url: https://github.com/evrial/AmazonDjangoShop
+      deploy_on_push: true
     envs:
     - key: AMAZON_ACCESS_KEY
       value: "your access key"
