@@ -17,5 +17,5 @@ spec:
       type: SECRET
     - key: PRODUCTION
       value: "Set if running in production, keep blank if in development"
-   databases:
-   - name: example-db
+  databases:
+  - name: example-db
