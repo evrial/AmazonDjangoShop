@@ -15,5 +15,3 @@ spec:
       value: "your associate tag"
     - key: PRODUCTION
       value: "Set if running in production, keep blank if in development"
-  databases:
-  - name: example-db
